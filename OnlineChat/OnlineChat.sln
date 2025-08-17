@@ -1,9 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36221.1 d17.14
+VisualStudioVersion = 17.14.36221.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.API", "Chat.API\Chat.API.csproj", "{4659A85E-8CB1-4925-9BD6-64747647BC6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.Domain", "Chat.Domain\Chat.Domain.csproj", "{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.Infrastructure", "Chat.Infrastructure\Chat.Infrastructure.csproj", "{FEFFB435-9778-4DA8-9F4C-A175939BFF53}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Chat.Application", "Chat.Application\Chat.Application.csproj", "{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{4659A85E-8CB1-4925-9BD6-64747647BC6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4659A85E-8CB1-4925-9BD6-64747647BC6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4659A85E-8CB1-4925-9BD6-64747647BC6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEFFB435-9778-4DA8-9F4C-A175939BFF53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEFFB435-9778-4DA8-9F4C-A175939BFF53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEFFB435-9778-4DA8-9F4C-A175939BFF53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEFFB435-9778-4DA8-9F4C-A175939BFF53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

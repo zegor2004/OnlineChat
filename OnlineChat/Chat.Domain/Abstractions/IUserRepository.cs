@@ -1,0 +1,12 @@
+﻿using Chat.Domain.Models;
+
+namespace Chat.Infrastructure.Repositories
+{
+    public interface IUserRepository
+    {
+        Task<string> Create(ChatUser user);
+        Task<string> Delete(string email);
+        Task<List<ChatUser>> Get();
+        Task<string> Update(string email, string password, string name);
+    }
+}
