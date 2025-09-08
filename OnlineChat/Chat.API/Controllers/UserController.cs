@@ -40,7 +40,7 @@ namespace Chat.API.Controllers
         [HttpPut("{Email}")]
         public async Task<ActionResult<string>> UpdateUser(string Email, [FromBody] UserRequest request)
         {
-            var email = await _usersService.UpdateUser(request.Email, request.Password, request.Name);
+            var email = await _usersService.UpdateUser(Email, request.Password, request.Name);
 
             return Ok(email);
         }
@@ -49,7 +49,7 @@ namespace Chat.API.Controllers
         {
             var email = await _usersService.DeleteUser(Email);
 
-            return Ok(email);
+            return NoContent();
         }
     }
 }

@@ -16,6 +16,7 @@ builder.Services.AddDbContext<ChatDbContext>(
         options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(ChatDbContext)));
     });
 
+
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 
@@ -23,12 +24,17 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbContext = scope.ServiceProvider.GetRequiredService<ChatDbContext>();
+        dbContext.Database.Migrate();
+    }
     app.UseSwagger();
     app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
-app.UseAuthorization();
+//app.UseAuthorization();
 app.MapControllers();
 app.UseExceptionHandler();
 
