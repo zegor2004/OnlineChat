@@ -5,6 +5,11 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+if (builder.Environment.IsDevelopment())
+{
+    builder.Configuration.AddUserSecrets<Program>();
+}
+
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -13,7 +18,7 @@ builder.Services.AddProblemDetails();
 builder.Services.AddDbContext<ChatDbContext>(
     options =>
     {
-        options.UseNpgsql(builder.Configuration.GetConnectionString(nameof(ChatDbContext)));
+        options.UseNpgsql(builder.Configuration.GetConnectionString("ChatDbContext"));
     });
 
 
