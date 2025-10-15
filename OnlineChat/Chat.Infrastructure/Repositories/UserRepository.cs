@@ -17,7 +17,6 @@ namespace Chat.Infrastructure.Repositories
         {
             _db = db;
         }
-
         public async Task<List<ChatUser>> Get()
         {
             var userEntites = await _db.Users
@@ -31,13 +30,13 @@ namespace Chat.Infrastructure.Repositories
             return users;
         }
 
-        public async Task<string> Create(ChatUser user)
+        public async Task<string> Create(string email, string passwordHash, string name)
         {
             var userEntites = new UserEntity
             {
-                Email = user.Email,
-                PasswordHash = user.PasswordHash,
-                Name = user.Name,
+                Email = email,
+                PasswordHash = passwordHash,
+                Name = name,
             };
             await _db.AddAsync(userEntites);
             await _db.SaveChangesAsync();
@@ -45,11 +44,12 @@ namespace Chat.Infrastructure.Repositories
             return userEntites.Email;
         }
 
-        public async Task<string> GetUserByEmail(string email)
+        public async Task<string> GetByEmail(string email)
         {
             var userEntity = await _db.Users
-                .FirstAsync(x => x.Email == email);
+                .FirstOrDefaultAsync(x => x.Email == email);
 
+            if (userEntity == null) return string.Empty;
             //var user = ChatUser.Create(userEntity.Email, userEntity.PasswordHash, userEntity.Name);
             return userEntity.PasswordHash;
         }

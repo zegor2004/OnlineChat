@@ -9,15 +9,15 @@ namespace Chat.Domain.Models
 {
     public class ChatUser
     {
-        private ChatUser(string email, string passwordHash, string name)
+        private ChatUser(string email, string password, string name)
         {
             Email = email;
-            PasswordHash = passwordHash;
+            Password = password;
             Name = name;
         }
         public int Id { get; }
         public string Email { get; } = string.Empty;
-        public string PasswordHash { get; } = string.Empty;
+        public string Password { get; } = string.Empty;
         public string Name { get; } = string.Empty;
 
         static readonly private int maxLenghtEmail = 25;
@@ -25,22 +25,22 @@ namespace Chat.Domain.Models
         static readonly private int maxLenghtName = 15;
         static readonly private int minLenghtPassword = 5;
         static readonly private int minLenghtName = 5;
-        public static ChatUser Create(string email, string passwordHash, string name)
+        public static ChatUser Create(string email, string password, string name)
         {
-            ChatUser user = new ChatUser(email, passwordHash, name);
+            ChatUser user = new ChatUser(email, password, name);
             return user;
         }
 
-        public static string DataValidation(string email, string passwordHash, string name)
+        public static string DataValidation(string email, string password, string name)
         {
             string mes = string.Empty;
             string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
-            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(passwordHash) || string.IsNullOrEmpty(name))
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(name))
             {
                 mes = "All fields must be filled in";
             }
             else if (email.Count() > maxLenghtEmail
-                || passwordHash.Count() < minLenghtPassword || passwordHash.Count() > maxLenghtPassword
+                || password.Count() < minLenghtPassword || password.Count() > maxLenghtPassword
                 || name.Count() < minLenghtName || name.Count() > maxLenghtName)
             {
                 mes = "The data is too small or too big";

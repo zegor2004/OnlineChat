@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("c7a2bb00-6a8f-4d12-88eb-c55431243fac")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chat.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0ad5cc73e24bd7ea88988c3632d5c6960fda4a34")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+235fd822c147d2ab4d3c1177d1b7d917d2f28d8d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Chat.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Chat.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

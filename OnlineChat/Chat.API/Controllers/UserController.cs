@@ -2,6 +2,7 @@
 using Chat.Application.Services;
 using Chat.Domain.Abstractions;
 using Chat.Domain.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Chat.API.Controllers
@@ -16,36 +17,30 @@ namespace Chat.API.Controllers
             _usersService = usersService;
         }
         [HttpGet]
+        [Authorize]
         public async Task<ActionResult<List<UserResponse>>> GetUsers()
         {
             var users = await _usersService.GetAllUsers();
 
-            var response = users.Select(b => new UserResponse(b.Email, b.PasswordHash, b.Name));
+            var response = users.Select(b => new UserResponse(b.Email, b.Password, b.Name));
 
             return Ok(response);
         }
         [HttpPost]
-        public async Task<ActionResult<string>> Registration([FromBody] UserRequest request)
+        public async Task<ActionResult<string>> Registration(UserRequest request)
         {
-            var mes = ChatUser.DataValidation(request.Email, request.Password, request.Name);
-            if (!string.IsNullOrEmpty(mes))
-            {
-                return BadRequest(mes);
-            }
+            var mes = await _usersService.Registration(request.Email, request.Password, request.Name);
 
-            var User = ChatUser.Create(request.Email, request.Password, request.Name);
+            if (!string.IsNullOrEmpty(mes)) return BadRequest(mes);
 
-            var email = await _usersService.CreateUser(User);
-
-            return Ok(email);
+            return Ok(mes);
         }
         [HttpPost]
         public async Task<ActionResult<string>> Login(UserRequest request)
         {
-            var user = ChatUser.Create(request.Email, request.Password, request.Name);
-
-            var password = await _usersService.Login(user);
-            return Ok(password);
+            var token = await _usersService.Login(request.Email, request.Password);
+            if (string.IsNullOrEmpty(token)) return BadRequest("Invalid email or password");
+            return Ok(token);
         }
         [HttpPut("{Email}")]
         public async Task<ActionResult<string>> UpdateUser(string Email, [FromBody] UserRequest request)

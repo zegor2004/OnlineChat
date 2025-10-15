@@ -4,8 +4,8 @@ namespace Chat.Domain.Abstractions
 {
     public interface IUserRepository
     {
-        Task<string> Create(ChatUser user);
-        Task<string> GetUserByEmail(string email);
+        Task<string> Create(string email, string passwordHash, string name);
+        Task<string> GetByEmail(string email);
         Task<string> Delete(string email);
         Task<List<ChatUser>> Get();
         Task<string> Update(string email, string passwordHash, string name);
