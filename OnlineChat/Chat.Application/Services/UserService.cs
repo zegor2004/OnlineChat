@@ -1,4 +1,5 @@
-﻿using Chat.Domain.Models;
+﻿using Chat.Domain.Abstractions;
+using Chat.Domain.Models;
 using Chat.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
@@ -27,9 +28,15 @@ namespace Chat.Application.Services
             return await _usersRerositry.Create(user);
         }
 
-        public async Task<string> UpdateUser(string email, string password, string name)
+        public async Task<string> Login(ChatUser user)
         {
-            return await _usersRerositry.Update(email, password, name);
+            string passwordHash = await _usersRerositry.GetUserByEmail(user.Email);
+            return passwordHash;
+        }
+
+        public async Task<string> UpdateUser(string email, string passwordHash, string name)
+        {
+            return await _usersRerositry.Update(email, passwordHash, name);
         }
 
         public async Task<string> DeleteUser(string email)

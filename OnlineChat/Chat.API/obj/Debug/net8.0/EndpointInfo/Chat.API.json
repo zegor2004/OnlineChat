@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/User": {
+    "/User/GetUsers": {
       "get": {
         "tags": [
           "User"
@@ -41,7 +41,9 @@
             }
           }
         }
-      },
+      }
+    },
+    "/User/Registration": {
       "post": {
         "tags": [
           "User"
@@ -89,7 +91,55 @@
         }
       }
     },
-    "/User/{Email}": {
+    "/User/Login": {
+      "post": {
+        "tags": [
+          "User"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UserRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "string"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/User/UpdateUser/{Email}": {
       "put": {
         "tags": [
           "User"
@@ -145,7 +195,9 @@
             }
           }
         }
-      },
+      }
+    },
+    "/User/DeleteUser/{Email}": {
       "delete": {
         "tags": [
           "User"

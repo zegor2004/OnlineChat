@@ -1,4 +1,5 @@
-﻿using Chat.Domain.Models;
+﻿using Chat.Domain.Abstractions;
+using Chat.Domain.Models;
 using Chat.Infrastructure.Entites;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -24,7 +25,7 @@ namespace Chat.Infrastructure.Repositories
                 .ToListAsync();
 
             var users = userEntites
-                .Select(x => ChatUser.Create(x.Email, x.Password, x.Name).User)
+                .Select(x => ChatUser.Create(x.Email, x.PasswordHash, x.Name))
                 .ToList();
 
             return users;
@@ -35,7 +36,7 @@ namespace Chat.Infrastructure.Repositories
             var userEntites = new UserEntity
             {
                 Email = user.Email,
-                Password = user.Password,
+                PasswordHash = user.PasswordHash,
                 Name = user.Name,
             };
             await _db.AddAsync(userEntites);
@@ -44,12 +45,21 @@ namespace Chat.Infrastructure.Repositories
             return userEntites.Email;
         }
 
-        public async Task<string> Update(string email, string password, string name)
+        public async Task<string> GetUserByEmail(string email)
+        {
+            var userEntity = await _db.Users
+                .FirstAsync(x => x.Email == email);
+
+            //var user = ChatUser.Create(userEntity.Email, userEntity.PasswordHash, userEntity.Name);
+            return userEntity.PasswordHash;
+        }
+
+        public async Task<string> Update(string email, string passwordHash, string name)
         {
             await _db.Users
                 .Where(b => b.Email == email)
                 .ExecuteUpdateAsync(s => s
-                .SetProperty(b => b.Password, b => password)
+                .SetProperty(b => b.PasswordHash, b => passwordHash)
                 .SetProperty(b => b.Name, b => name)
                 );
 

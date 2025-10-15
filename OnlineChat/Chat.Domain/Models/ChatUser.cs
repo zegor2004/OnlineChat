@@ -2,33 +2,54 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Chat.Domain.Models
 {
     public class ChatUser
     {
-        private ChatUser(string email, string password, string name)
+        private ChatUser(string email, string passwordHash, string name)
         {
             Email = email;
-            Password = password;
+            PasswordHash = passwordHash;
             Name = name;
         }
         public int Id { get; }
         public string Email { get; } = string.Empty;
-        public string Password { get; } = string.Empty;
+        public string PasswordHash { get; } = string.Empty;
         public string Name { get; } = string.Empty;
 
+        static readonly private int maxLenghtEmail = 25;
+        static readonly private int maxLenghtPassword = 25;
+        static readonly private int maxLenghtName = 15;
+        static readonly private int minLenghtPassword = 5;
+        static readonly private int minLenghtName = 5;
+        public static ChatUser Create(string email, string passwordHash, string name)
+        {
+            ChatUser user = new ChatUser(email, passwordHash, name);
+            return user;
+        }
 
-        public static (string Mes, ChatUser User) Create(string email, string password, string name)
+        public static string DataValidation(string email, string passwordHash, string name)
         {
             string mes = string.Empty;
-            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(name))
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(passwordHash) || string.IsNullOrEmpty(name))
             {
-
+                mes = "All fields must be filled in";
             }
-            ChatUser user = new ChatUser(email, password, name);
-            return (mes, user);
+            else if (email.Count() > maxLenghtEmail
+                || passwordHash.Count() < minLenghtPassword || passwordHash.Count() > maxLenghtPassword
+                || name.Count() < minLenghtName || name.Count() > maxLenghtName)
+            {
+                mes = "The data is too small or too big";
+            }
+            else if (!Regex.IsMatch(email, emailPattern)) 
+            {
+                mes = "The email address is incorrect";
+            }
+            return mes;
         }
     }
 }

@@ -1,8 +1,34 @@
 [
   {
     "ContainingType": "Chat.API.Controllers.UserController",
+    "Method": "DeleteUser",
+    "RelativePath": "User/DeleteUser/{Email}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Email",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Chat.API.Controllers.UserController",
     "Method": "GetUsers",
-    "RelativePath": "User",
+    "RelativePath": "User/GetUsers",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -21,8 +47,34 @@
   },
   {
     "ContainingType": "Chat.API.Controllers.UserController",
-    "Method": "CreateUser",
-    "RelativePath": "User",
+    "Method": "Login",
+    "RelativePath": "User/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Chat.API.Contracts.UserRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Chat.API.Controllers.UserController",
+    "Method": "Registration",
+    "RelativePath": "User/Registration",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -48,7 +100,7 @@
   {
     "ContainingType": "Chat.API.Controllers.UserController",
     "Method": "UpdateUser",
-    "RelativePath": "User/{Email}",
+    "RelativePath": "User/UpdateUser/{Email}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -61,32 +113,6 @@
       {
         "Name": "request",
         "Type": "Chat.API.Contracts.UserRequest",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": [
-      {
-        "Type": "System.String",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "Chat.API.Controllers.UserController",
-    "Method": "DeleteUser",
-    "RelativePath": "User/{Email}",
-    "HttpMethod": "DELETE",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Email",
-        "Type": "System.String",
         "IsRequired": true
       }
     ],

@@ -16,7 +16,7 @@ namespace Chat.Infrastructure.Configurations
             builder.Property(x => x.Email)
                 .IsRequired();
 
-            builder.Property(x => x.Password)
+            builder.Property(x => x.PasswordHash)
                 .IsRequired();
 
             builder.Property(x => x.Name)

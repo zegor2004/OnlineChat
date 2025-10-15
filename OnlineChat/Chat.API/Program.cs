@@ -1,5 +1,6 @@
 using Chat.Application.Services;
 using Chat.Infrastructure;
+using Chat.Domain.Abstractions;
 using Chat.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 

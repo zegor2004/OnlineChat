@@ -1,12 +1,13 @@
 ﻿using Chat.API.Contracts;
 using Chat.Application.Services;
+using Chat.Domain.Abstractions;
 using Chat.Domain.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Chat.API.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("[controller]/[action]")]
     public class UserController : ControllerBase
     {
         private readonly IUserService _usersService;
@@ -19,23 +20,32 @@ namespace Chat.API.Controllers
         {
             var users = await _usersService.GetAllUsers();
 
-            var response = users.Select(b => new UserResponse( b.Email, b.Password, b.Name));
+            var response = users.Select(b => new UserResponse(b.Email, b.PasswordHash, b.Name));
 
             return Ok(response);
         }
         [HttpPost]
-        public async Task<ActionResult<string>> CreateUser([FromBody] UserRequest request)
+        public async Task<ActionResult<string>> Registration([FromBody] UserRequest request)
         {
-            var (Mes, User) = ChatUser.Create(request.Email, request.Password, request.Name);
-
-            if (!string.IsNullOrEmpty(Mes))
+            var mes = ChatUser.DataValidation(request.Email, request.Password, request.Name);
+            if (!string.IsNullOrEmpty(mes))
             {
-                return BadRequest(Mes);
+                return BadRequest(mes);
             }
+
+            var User = ChatUser.Create(request.Email, request.Password, request.Name);
 
             var email = await _usersService.CreateUser(User);
 
             return Ok(email);
+        }
+        [HttpPost]
+        public async Task<ActionResult<string>> Login(UserRequest request)
+        {
+            var user = ChatUser.Create(request.Email, request.Password, request.Name);
+
+            var password = await _usersService.Login(user);
+            return Ok(password);
         }
         [HttpPut("{Email}")]
         public async Task<ActionResult<string>> UpdateUser(string Email, [FromBody] UserRequest request)
