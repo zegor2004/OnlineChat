@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Claims;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -41,7 +42,9 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
             IssuerSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(builder.Configuration.GetSection("JwtOptions").Get<JwtOptions>().SecretKey))
+                Encoding.UTF8.GetBytes(builder.Configuration.GetSection("JwtOptions").Get<JwtOptions>().SecretKey)),
+             NameClaimType = "email",
+            RoleClaimType = ClaimTypes.Role
         };
     });
 

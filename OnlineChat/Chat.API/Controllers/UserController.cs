@@ -1,4 +1,5 @@
-﻿using Chat.API.Contracts;
+﻿using System.Security.Claims;
+using Chat.API.Contracts;
 using Chat.Application.Services;
 using Chat.Domain.Abstractions;
 using Chat.Domain.Models;
@@ -24,7 +25,15 @@ namespace Chat.API.Controllers
 
             var response = users.Select(b => new UserResponse(b.Email, b.Password, b.Name));
 
-            return Ok(response);
+            var email = User.FindFirst(ClaimTypes.Email)?.Value;
+            return Ok(email);
+        }
+        [HttpGet]
+        [Authorize]
+        public async Task<ActionResult<string>> GetChat()
+        {
+
+            return Ok();
         }
         [HttpPost]
         public async Task<ActionResult<string>> Registration(UserRequest request)
