@@ -14,10 +14,13 @@ namespace Chat.Application.Services.Chat
         {
             _chatRepository = chatRepository;
         }
-        public async Task<Guid> Create(string email_1, string email_2)
+        public async Task<Guid> SendMessage(string email_1, string email_2)
         {
-            var chat = await _chatRepository.Create(email_1, email_2);
-            return chat;
+            var chatId = _chatRepository.Get(email_1,email_2);
+            if (chatId == null)
+                chatId = _chatRepository.Create(email_1, email_2);
+
+            return new Guid();
         }
     }
 }

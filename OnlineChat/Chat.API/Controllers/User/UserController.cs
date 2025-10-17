@@ -1,5 +1,6 @@
 ﻿using System.Security.Claims;
-using Chat.API.Contracts.User;
+using Chat.API.Contracts.User.Request;
+using Chat.API.Contracts.User.Response;
 using Chat.Application.Services;
 using Chat.Domain.Abstractions.User;
 using Chat.Domain.Models;
@@ -19,9 +20,9 @@ namespace Chat.API.Controllers.User
         }
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<List<UserResponse>>> FindUser([FromBody]string name)
+        public async Task<ActionResult<List<UserResponse>>> FindUser(FindUserRequest request)
         {
-            var users = await _usersService.FindUser(name);
+            var users = await _usersService.FindUser(request.name);
 
             var response = users.Select(b => new UserResponse(b.Email, b.Name));
 
@@ -29,7 +30,7 @@ namespace Chat.API.Controllers.User
             return Ok(response);
         }
         [HttpPost]
-        public async Task<ActionResult<string>> Registration(UserRequest request)
+        public async Task<ActionResult<string>> Registration(RegUserRequest request)
         {
             var mes = await _usersService.Registration(request.Email, request.Password, request.Name);
 
@@ -39,7 +40,7 @@ namespace Chat.API.Controllers.User
             return Ok(mes);
         }
         [HttpPost]
-        public async Task<ActionResult<string>> Login(UserRequest request)
+        public async Task<ActionResult<string>> Login(LoginUserRequest request)
         {
             var token = await _usersService.Login(request.Email, request.Password);
             if (string.IsNullOrEmpty(token)) 
@@ -47,7 +48,7 @@ namespace Chat.API.Controllers.User
             return Ok(token);
         }
         [HttpPut("{Email}")]
-        public async Task<ActionResult<string>> UpdateUser(string Email, [FromBody] UserRequest request)
+        public async Task<ActionResult<string>> UpdateUser(string Email, [FromBody] RegUserRequest request)
         {
             var email = await _usersService.UpdateUser(Email, request.Password, request.Name);
 

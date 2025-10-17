@@ -1,12 +1,17 @@
 [
   {
     "ContainingType": "Chat.API.Controllers.Chat.ChatController",
-    "Method": "Create",
-    "RelativePath": "Chat/Create",
+    "Method": "SendMessage",
+    "RelativePath": "Chat/SendMessage",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
+      {
+        "Name": "email_1",
+        "Type": "System.String",
+        "IsRequired": false
+      },
       {
         "Name": "email_2",
         "Type": "System.String",
@@ -60,14 +65,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "name",
-        "Type": "System.String",
+        "Name": "request",
+        "Type": "Chat.API.Contracts.User.Request.FindUserRequest",
         "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Chat.API.Contracts.User.UserResponse, Chat.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[Chat.API.Contracts.User.Response.UserResponse, Chat.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -87,7 +92,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Chat.API.Contracts.User.UserRequest",
+        "Type": "Chat.API.Contracts.User.Request.LoginUserRequest",
         "IsRequired": true
       }
     ],
@@ -113,7 +118,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Chat.API.Contracts.User.UserRequest",
+        "Type": "Chat.API.Contracts.User.Request.RegUserRequest",
         "IsRequired": true
       }
     ],
@@ -144,7 +149,7 @@
       },
       {
         "Name": "request",
-        "Type": "Chat.API.Contracts.User.UserRequest",
+        "Type": "Chat.API.Contracts.User.Request.RegUserRequest",
         "IsRequired": true
       }
     ],

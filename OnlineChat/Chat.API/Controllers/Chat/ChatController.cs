@@ -1,4 +1,5 @@
 ﻿using Chat.Domain.Abstractions.Chat;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Chat.API.Controllers.Chat
@@ -14,11 +15,11 @@ namespace Chat.API.Controllers.Chat
         }
 
         [HttpPost]
-        public async Task<ActionResult<Guid>> Create(string email_2)
+        public async Task<ActionResult<Guid>> SendMessage(string email_2)
         {
-            var email = User.FindFirst("email")?.Value;
-            var chat = await _chatServices.Create(email, email_2);
-            return Ok(chat);
+            var email_1 = User.FindFirst("email")?.Value;
+            var chat_id = await _chatServices.SendMessage(email_1, email_2);
+            return Ok(chat_id);
         }
     }
 }

@@ -8,8 +8,8 @@ namespace Chat.Infrastructure.Entites.Chat
 {
     public class ChatEntity
     {
-        public int Id { get; set; }
-        public Guid ChatId { get; set; }
-        public string UserId { get; set; } = string.Empty;
+        public int id { get; set; }
+        public Guid chat_id { get; set; }
+        public string user_id { get; set; } = string.Empty;
     }
 }

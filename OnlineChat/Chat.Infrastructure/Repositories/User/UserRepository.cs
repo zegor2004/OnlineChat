@@ -21,13 +21,13 @@ namespace Chat.Infrastructure.Repositories.User
         }
         public async Task<List<ChatUser>> Get(string name)
         {
-            var userEntites = await _db.Users
-                .Where(x => EF.Functions.Like(x.Name, $"{name}%"))
+            var userEntites = await _db.users
+                .Where(x => EF.Functions.Like(x.name, $"{name}%"))
                 .AsNoTracking()
                 .ToListAsync();
 
             var users = userEntites
-                .Select(x => ChatUser.Create(x.Email, string.Empty, x.Name))
+                .Select(x => ChatUser.Create(x.email, string.Empty, x.name))
                 .ToList();
 
             return users;
@@ -37,33 +37,34 @@ namespace Chat.Infrastructure.Repositories.User
         {
             var userEntites = new UserEntity
             {
-                Email = email,
-                PasswordHash = passwordHash,
-                Name = name,
+                email = email,
+                password_hash = passwordHash,
+                name = name,
+                created_at = DateTime.UtcNow
             };
             await _db.AddAsync(userEntites);
             await _db.SaveChangesAsync();
 
-            return userEntites.Email;
+            return userEntites.email;
         }
 
         public async Task<string> GetByEmail(string email)
         {
-            var userEntity = await _db.Users
-                .FirstOrDefaultAsync(x => x.Email == email);
+            var userEntity = await _db.users
+                .FirstOrDefaultAsync(x => x.email == email);
 
             if (userEntity == null) return string.Empty;
             //var user = ChatUser.Create(userEntity.Email, userEntity.PasswordHash, userEntity.Name);
-            return userEntity.PasswordHash;
+            return userEntity.password_hash;
         }
 
         public async Task<string> Update(string email, string passwordHash, string name)
         {
-            await _db.Users
-                .Where(b => b.Email == email)
+            await _db.users
+                .Where(b => b.email == email)
                 .ExecuteUpdateAsync(s => s
-                .SetProperty(b => b.PasswordHash, b => passwordHash)
-                .SetProperty(b => b.Name, b => name)
+                .SetProperty(b => b.password_hash, b => passwordHash)
+                .SetProperty(b => b.name, b => name)
                 );
 
             return email;
@@ -71,8 +72,8 @@ namespace Chat.Infrastructure.Repositories.User
 
         public async Task<string> Delete(string email)
         {
-            await _db.Users
-                .Where(b => b.Email == email)
+            await _db.users
+                .Where(b => b.email == email)
                 .ExecuteDeleteAsync();
 
             return email;

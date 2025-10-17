@@ -19,8 +19,9 @@ namespace Chat.Infrastructure
         {
         }
 
-        public DbSet<UserEntity> Users { get; set; } = null!;
+        public DbSet<UserEntity> users { get; set; } = null!;
 
-        public DbSet<ChatEntity> Chats { get; set; } = null!;
+        public DbSet<ChatEntity> chats { get; set; } = null!;
+        public DbSet<MessageEntity> messages { get; set; } = null!;
     }
 }

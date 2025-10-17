@@ -13,14 +13,14 @@ namespace Chat.Infrastructure.Configurations.Chat
     {
         public void Configure(EntityTypeBuilder<ChatEntity> builder)
         {
-            builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id)
+            builder.HasKey(x => x.id);
+            builder.Property(x => x.id)
                 .ValueGeneratedOnAdd();
 
-            builder.Property(x => x.ChatId)
+            builder.Property(x => x.chat_id)
                 .IsRequired();
 
-            builder.Property(x => x.UserId)
+            builder.Property(x => x.user_id)
                 .IsRequired();
         }
     }

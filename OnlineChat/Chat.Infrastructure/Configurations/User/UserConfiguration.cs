@@ -9,17 +9,20 @@ namespace Chat.Infrastructure.Configurations.User
     {
         public void Configure(EntityTypeBuilder<UserEntity> builder)
         {
-            builder.HasKey(x => x.Id);
-            builder.Property(x => x.Id)
+            builder.HasKey(x => x.id);
+            builder.Property(x => x.id)
                 .ValueGeneratedOnAdd();
 
-            builder.Property(x => x.Email)
+            builder.Property(x => x.email)
                 .IsRequired();
 
-            builder.Property(x => x.PasswordHash)
+            builder.Property(x => x.password_hash)
                 .IsRequired();
 
-            builder.Property(x => x.Name)
+            builder.Property(x => x.name)
+                .IsRequired();
+
+            builder.Property(x => x.created_at)
                 .IsRequired();
         }
     }

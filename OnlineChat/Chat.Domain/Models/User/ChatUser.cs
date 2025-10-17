@@ -20,11 +20,11 @@ namespace Chat.Domain.Models.User
         public string Password { get; } = string.Empty;
         public string Name { get; } = string.Empty;
 
-        static readonly private int maxLenghtEmail = 25;
-        static readonly private int maxLenghtPassword = 25;
-        static readonly private int maxLenghtName = 15;
-        static readonly private int minLenghtPassword = 5;
-        static readonly private int minLenghtName = 5;
+        private const int MaxLenghtEmail = 25;
+        private const int MaxLenghtPassword = 25;
+        private const int MaxLenghtName = 15;
+        private const int MinLenghtPassword = 5;
+        private const int MinLenghtName = 5;
         public static ChatUser Create(string email, string password, string name)
         {
             ChatUser user = new ChatUser(email, password, name);
@@ -39,9 +39,9 @@ namespace Chat.Domain.Models.User
             {
                 mes = "All fields must be filled in";
             }
-            else if (email.Count() > maxLenghtEmail
-                || password.Count() < minLenghtPassword || password.Count() > maxLenghtPassword
-                || name.Count() < minLenghtName || name.Count() > maxLenghtName)
+            else if (email.Count() > MaxLenghtEmail
+                || password.Count() < MinLenghtPassword || password.Count() > MaxLenghtPassword
+                || name.Count() < MinLenghtName || name.Count() > MaxLenghtName)
             {
                 mes = "The data is too small or too big";
             }
