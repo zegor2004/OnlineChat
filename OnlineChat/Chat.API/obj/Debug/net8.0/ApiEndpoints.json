@@ -1,6 +1,32 @@
 [
   {
-    "ContainingType": "Chat.API.Controllers.UserController",
+    "ContainingType": "Chat.API.Controllers.Chat.ChatController",
+    "Method": "Create",
+    "RelativePath": "Chat/Create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "email_2",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Guid",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Chat.API.Controllers.User.UserController",
     "Method": "DeleteUser",
     "RelativePath": "User/DeleteUser/{Email}",
     "HttpMethod": "DELETE",
@@ -26,16 +52,22 @@
     ]
   },
   {
-    "ContainingType": "Chat.API.Controllers.UserController",
-    "Method": "GetUsers",
-    "RelativePath": "User/GetUsers",
+    "ContainingType": "Chat.API.Controllers.User.UserController",
+    "Method": "FindUser",
+    "RelativePath": "User/FindUser",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "name",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Chat.API.Contracts.UserResponse, Chat.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[Chat.API.Contracts.User.UserResponse, Chat.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -46,7 +78,7 @@
     ]
   },
   {
-    "ContainingType": "Chat.API.Controllers.UserController",
+    "ContainingType": "Chat.API.Controllers.User.UserController",
     "Method": "Login",
     "RelativePath": "User/Login",
     "HttpMethod": "POST",
@@ -55,7 +87,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Chat.API.Contracts.UserRequest",
+        "Type": "Chat.API.Contracts.User.UserRequest",
         "IsRequired": true
       }
     ],
@@ -72,7 +104,7 @@
     ]
   },
   {
-    "ContainingType": "Chat.API.Controllers.UserController",
+    "ContainingType": "Chat.API.Controllers.User.UserController",
     "Method": "Registration",
     "RelativePath": "User/Registration",
     "HttpMethod": "POST",
@@ -81,7 +113,7 @@
     "Parameters": [
       {
         "Name": "request",
-        "Type": "Chat.API.Contracts.UserRequest",
+        "Type": "Chat.API.Contracts.User.UserRequest",
         "IsRequired": true
       }
     ],
@@ -98,7 +130,7 @@
     ]
   },
   {
-    "ContainingType": "Chat.API.Controllers.UserController",
+    "ContainingType": "Chat.API.Controllers.User.UserController",
     "Method": "UpdateUser",
     "RelativePath": "User/UpdateUser/{Email}",
     "HttpMethod": "PUT",
@@ -112,7 +144,7 @@
       },
       {
         "Name": "request",
-        "Type": "Chat.API.Contracts.UserRequest",
+        "Type": "Chat.API.Contracts.User.UserRequest",
         "IsRequired": true
       }
     ],

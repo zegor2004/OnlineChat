@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chat.Infrastructure.Entites
+namespace Chat.Infrastructure.Entites.User
 {
     public class UserEntity
     {

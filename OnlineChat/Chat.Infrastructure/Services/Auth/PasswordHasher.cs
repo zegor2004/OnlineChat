@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Chat.Domain.Abstractions;
+using Chat.Domain.Abstractions.Auth;
 
-namespace Chat.Infrastructure.Services
+namespace Chat.Infrastructure.Services.Auth
 {
     public class PasswordHasher : IPasswordHasher
     {

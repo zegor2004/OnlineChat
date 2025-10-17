@@ -1,4 +1,4 @@
-﻿namespace Chat.API.Contracts
+﻿namespace Chat.API.Contracts.User
 {
     public record UserRequest(
         string Email,

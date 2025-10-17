@@ -1,9 +1,9 @@
-﻿using Chat.Infrastructure.Entites;
+﻿using Chat.Infrastructure.Entites.User;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System.Security.Cryptography.X509Certificates;
 
-namespace Chat.Infrastructure.Configurations
+namespace Chat.Infrastructure.Configurations.User
 {
     public class UserConfiguration : IEntityTypeConfiguration<UserEntity>
     {

@@ -1,14 +1,16 @@
-﻿using Chat.Domain.Abstractions;
-using Chat.Domain.Models;
+﻿using Chat.Domain.Abstractions.User;
+using Chat.Domain.Models.User;
 using Chat.Infrastructure.Entites;
+using Chat.Infrastructure.Entites.User;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chat.Infrastructure.Repositories
+namespace Chat.Infrastructure.Repositories.User
 {
     public class UserRepository : IUserRepository
     {
@@ -17,14 +19,15 @@ namespace Chat.Infrastructure.Repositories
         {
             _db = db;
         }
-        public async Task<List<ChatUser>> Get()
+        public async Task<List<ChatUser>> Get(string name)
         {
             var userEntites = await _db.Users
+                .Where(x => EF.Functions.Like(x.Name, $"{name}%"))
                 .AsNoTracking()
                 .ToListAsync();
 
             var users = userEntites
-                .Select(x => ChatUser.Create(x.Email, x.PasswordHash, x.Name))
+                .Select(x => ChatUser.Create(x.Email, string.Empty, x.Name))
                 .ToList();
 
             return users;

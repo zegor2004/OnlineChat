@@ -1,5 +1,6 @@
-﻿using Chat.Domain.Abstractions;
-using Chat.Domain.Models;
+﻿using Chat.Domain.Abstractions.Auth;
+using Chat.Domain.Abstractions.User;
+using Chat.Domain.Models.User;
 using Chat.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chat.Application.Services
+namespace Chat.Application.Services.User
 {
     public class UserService : IUserService
     {
@@ -22,9 +23,9 @@ namespace Chat.Application.Services
             _jwtProvider = jwtProvider;
         }
 
-        public async Task<List<ChatUser>> GetAllUsers()
+        public async Task<List<ChatUser>> FindUser(string name)
         {
-            return await _usersRerositry.Get();
+            return await _usersRerositry.Get(name);
         }
 
         public async Task<string> Registration(string email, string password, string name)
@@ -45,7 +46,7 @@ namespace Chat.Application.Services
         public async Task<string> Login(string email, string password)
         {
             string passwordHash = await _usersRerositry.GetByEmail(email);
-            if (string.IsNullOrEmpty(passwordHash) || !_passwordHasher.Verify(password, passwordHash)) 
+            if (string.IsNullOrEmpty(passwordHash) || !_passwordHasher.Verify(password, passwordHash))
                 return string.Empty;
 
             var token = _jwtProvider.GenerateToken(email);

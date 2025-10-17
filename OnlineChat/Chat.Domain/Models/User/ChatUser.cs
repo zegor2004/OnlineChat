@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Chat.Domain.Models
+namespace Chat.Domain.Models.User
 {
     public class ChatUser
     {
@@ -45,7 +45,7 @@ namespace Chat.Domain.Models
             {
                 mes = "The data is too small or too big";
             }
-            else if (!Regex.IsMatch(email, emailPattern)) 
+            else if (!Regex.IsMatch(email, emailPattern))
             {
                 mes = "The email address is incorrect";
             }

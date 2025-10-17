@@ -1,4 +1,5 @@
-﻿using Chat.Infrastructure.Entites;
+﻿using Chat.Infrastructure.Entites.Chat;
+using Chat.Infrastructure.Entites.User;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

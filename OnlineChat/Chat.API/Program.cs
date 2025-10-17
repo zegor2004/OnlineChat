@@ -1,8 +1,12 @@
-using Chat.Application.Services;
-using Chat.Domain.Abstractions;
+using Chat.Application.Services.Chat;
+using Chat.Application.Services.User;
+using Chat.Domain.Abstractions.Auth;
+using Chat.Domain.Abstractions.Chat;
+using Chat.Domain.Abstractions.User;
 using Chat.Infrastructure;
-using Chat.Infrastructure.Repositories;
-using Chat.Infrastructure.Services;
+using Chat.Infrastructure.Repositories.Chat;
+using Chat.Infrastructure.Repositories.User;
+using Chat.Infrastructure.Services.Auth;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -52,6 +56,8 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 builder.Services.AddScoped<IJwtProvider, JwtProvider>();
+builder.Services.AddScoped<IChatRepository, ChatRepository>();
+builder.Services.AddScoped<IChatServices, ChatServices>();
 
 
 var app = builder.Build();

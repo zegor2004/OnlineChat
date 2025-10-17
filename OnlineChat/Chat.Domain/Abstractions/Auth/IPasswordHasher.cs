@@ -1,4 +1,4 @@
-﻿namespace Chat.Domain.Abstractions
+﻿namespace Chat.Domain.Abstractions.Auth
 {
     public interface IPasswordHasher
     {

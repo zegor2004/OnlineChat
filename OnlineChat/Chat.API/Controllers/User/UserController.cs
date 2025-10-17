@@ -1,12 +1,12 @@
 ﻿using System.Security.Claims;
-using Chat.API.Contracts;
+using Chat.API.Contracts.User;
 using Chat.Application.Services;
-using Chat.Domain.Abstractions;
+using Chat.Domain.Abstractions.User;
 using Chat.Domain.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Chat.API.Controllers
+namespace Chat.API.Controllers.User
 {
     [ApiController]
     [Route("[controller]/[action]")]
@@ -19,28 +19,22 @@ namespace Chat.API.Controllers
         }
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<List<UserResponse>>> GetUsers()
+        public async Task<ActionResult<List<UserResponse>>> FindUser([FromBody]string name)
         {
-            var users = await _usersService.GetAllUsers();
+            var users = await _usersService.FindUser(name);
 
-            var response = users.Select(b => new UserResponse(b.Email, b.Password, b.Name));
+            var response = users.Select(b => new UserResponse(b.Email, b.Name));
 
-            var email = User.FindFirst(ClaimTypes.Email)?.Value;
-            return Ok(email);
-        }
-        [HttpGet]
-        [Authorize]
-        public async Task<ActionResult<string>> GetChat()
-        {
-
-            return Ok();
+            //var email = User.FindFirst(ClaimTypes.Email)?.Value;
+            return Ok(response);
         }
         [HttpPost]
         public async Task<ActionResult<string>> Registration(UserRequest request)
         {
             var mes = await _usersService.Registration(request.Email, request.Password, request.Name);
 
-            if (!string.IsNullOrEmpty(mes)) return BadRequest(mes);
+            if (!string.IsNullOrEmpty(mes)) 
+                return BadRequest(mes);
 
             return Ok(mes);
         }
@@ -48,7 +42,8 @@ namespace Chat.API.Controllers
         public async Task<ActionResult<string>> Login(UserRequest request)
         {
             var token = await _usersService.Login(request.Email, request.Password);
-            if (string.IsNullOrEmpty(token)) return BadRequest("Invalid email or password");
+            if (string.IsNullOrEmpty(token)) 
+                return BadRequest("Invalid email or password");
             return Ok(token);
         }
         [HttpPut("{Email}")]
