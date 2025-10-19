@@ -7,7 +7,7 @@ namespace Chat.Domain.Abstractions.User
         Task<string> Create(string email, string passwordHash, string name);
         Task<string> GetByEmail(string email);
         Task<string> Delete(string email);
-        Task<List<ChatUser>> Get(string name);
+        Task<List<UserModel>> Get(string name);
         Task<string> Update(string email, string passwordHash, string name);
     }
 }

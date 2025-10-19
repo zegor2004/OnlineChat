@@ -6,21 +6,22 @@ using System.Threading.Tasks;
 
 namespace Chat.Domain.Models.Chat
 {
-    public class Chat
+    public class ChatModel
     {
-        private Chat(Guid chatId, string userId)
+        private ChatModel(Guid chatId, string userId, List<Message> messages)
         {
             ChatId = chatId;
             UserId = userId;
+            Messages = messages;
         }
-        public int Id { get; }
         public Guid ChatId { get; }
         public string UserId { get; } = string.Empty;
+        List<Message> Messages { get; set; }
 
-        public static Chat Create(string userId)
+        public static ChatModel Create(string userId, List<Message> messages)
         {
             var guid = Guid.NewGuid();
-            var chat = new Chat(guid, userId);
+            var chat = new ChatModel(guid, userId, messages);
             return chat;
         }
     }

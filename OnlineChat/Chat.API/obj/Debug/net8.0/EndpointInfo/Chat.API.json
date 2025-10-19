@@ -12,13 +12,6 @@
         ],
         "parameters": [
           {
-            "name": "email_1",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "email_2",
             "in": "query",
             "schema": {

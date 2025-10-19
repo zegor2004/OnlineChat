@@ -19,7 +19,7 @@ namespace Chat.Infrastructure.Repositories.User
         {
             _db = db;
         }
-        public async Task<List<ChatUser>> Get(string name)
+        public async Task<List<UserModel>> Get(string name)
         {
             var userEntites = await _db.users
                 .Where(x => EF.Functions.Like(x.name, $"{name}%"))
@@ -27,7 +27,7 @@ namespace Chat.Infrastructure.Repositories.User
                 .ToListAsync();
 
             var users = userEntites
-                .Select(x => ChatUser.Create(x.email, string.Empty, x.name))
+                .Select(x => UserModel.Create(x.email, string.Empty, x.name))
                 .ToList();
 
             return users;

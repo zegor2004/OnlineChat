@@ -8,11 +8,6 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "email_1",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "email_2",
         "Type": "System.String",
         "IsRequired": false

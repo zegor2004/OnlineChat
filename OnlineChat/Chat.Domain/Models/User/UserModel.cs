@@ -7,15 +7,14 @@ using System.Threading.Tasks;
 
 namespace Chat.Domain.Models.User
 {
-    public class ChatUser
+    public class UserModel
     {
-        private ChatUser(string email, string password, string name)
+        private UserModel(string email, string password, string name)
         {
             Email = email;
             Password = password;
             Name = name;
         }
-        public int Id { get; }
         public string Email { get; } = string.Empty;
         public string Password { get; } = string.Empty;
         public string Name { get; } = string.Empty;
@@ -25,9 +24,9 @@ namespace Chat.Domain.Models.User
         private const int MaxLenghtName = 15;
         private const int MinLenghtPassword = 5;
         private const int MinLenghtName = 5;
-        public static ChatUser Create(string email, string password, string name)
+        public static UserModel Create(string email, string password, string name)
         {
-            ChatUser user = new ChatUser(email, password, name);
+            UserModel user = new UserModel(email, password, name);
             return user;
         }
 

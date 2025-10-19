@@ -23,14 +23,14 @@ namespace Chat.Application.Services.User
             _jwtProvider = jwtProvider;
         }
 
-        public async Task<List<ChatUser>> FindUser(string name)
+        public async Task<List<UserModel>> FindUser(string name)
         {
             return await _usersRerositry.Get(name);
         }
 
         public async Task<string> Registration(string email, string password, string name)
         {
-            var mes = ChatUser.DataValidation(email, password, name);
+            var mes = UserModel.DataValidation(email, password, name);
             if (!string.IsNullOrEmpty(mes)) return mes;
 
             var _user = await _usersRerositry.GetByEmail(email);

@@ -1,0 +1,48 @@
+﻿using Chat.Domain.Abstractions.Chat;
+using Chat.Domain.Models.Chat;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Chat.Infrastructure.Repositories.Chat
+{
+    public class MessageRepository : IMessageRepository
+    {
+        private readonly ChatDbContext _db;
+        public MessageRepository(ChatDbContext db)
+        {
+            _db = db;
+        }
+        public async Task<MessageModel> GetMessageLast(string chatId)
+        {
+            var messagesEntity = await _db.messages
+                .Where(x => x.chat_id == chatId)
+                .OrderByDescending(x => x.created_at)
+                .FirstOrDefaultAsync();
+
+            var message =  MessageModel.Create(
+                messagesEntity.chat_id,
+                messagesEntity.user_id,
+                messagesEntity.text,
+                messagesEntity.created_at);
+
+            return message;
+        }
+        public async Task<List<MessageModel>> Get(string chatId)
+        {
+            var messagesEntity = await _db.messages
+                .Where(x => x.chat_id == chatId)
+                .AsNoTracking()
+                .ToListAsync();
+
+            var messages = messagesEntity
+                .Select(x => MessageModel.Create(x.chat_id, x.user_id, x.text, x.created_at))
+                .ToList();
+
+            return messages;
+        }
+    }
+}
