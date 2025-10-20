@@ -22,10 +22,13 @@ namespace Chat.Application.Services.User
             _passwordHasher = passwordHasher;
             _jwtProvider = jwtProvider;
         }
-
-        public async Task<List<UserModel>> FindUser(string name)
+        public async Task<UserModel> GetUserByEmail(string email)
         {
-            return await _usersRerositry.Get(name);
+            return await _usersRerositry.GetUserByEmail(email);
+        }
+        public async Task<List<UserModel>> FindUserByName(string name)
+        {
+            return await _usersRerositry.GetUsersByName(name);
         }
 
         public async Task<string> Registration(string email, string password, string name)
@@ -33,7 +36,7 @@ namespace Chat.Application.Services.User
             var mes = UserModel.DataValidation(email, password, name);
             if (!string.IsNullOrEmpty(mes)) return mes;
 
-            var _user = await _usersRerositry.GetByEmail(email);
+            var _user = await _usersRerositry.GetPasswordByEmail(email);
             if (!string.IsNullOrEmpty(_user)) return "This email is already busy";
 
             var passwordHash = _passwordHasher.Generate(password);
@@ -45,7 +48,7 @@ namespace Chat.Application.Services.User
 
         public async Task<string> Login(string email, string password)
         {
-            string passwordHash = await _usersRerositry.GetByEmail(email);
+            string passwordHash = await _usersRerositry.GetPasswordByEmail(email);
             if (string.IsNullOrEmpty(passwordHash) || !_passwordHasher.Verify(password, passwordHash))
                 return string.Empty;
 

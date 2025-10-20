@@ -41,24 +41,34 @@ namespace Chat.Infrastructure.Repositories.Chat
             return guid;
         }
 
-        public async Task<List<ChatEntity>> GetChats(string email)
+        public async Task<List<ChatModel>> GetChats(string email)
         {
-            //var chatId = await _db.chats
-            //    .Where(x1 => x1.user_id == email_1)
-            //    .Where(x1 => _db.chats.Any(x2 => x2.chat_id == x1.chat_id && x2.user_id == email_2))
-            //    .AsNoTracking()
-            //    .FirstOrDefaultAsync();
 
             var chatsEntity = await _db.chats
                 .Where(x => x.user_id == email)
                 .AsNoTracking()
                 .ToListAsync();
 
-            var chatsId = chatsEntity
-                .Select(x => ChatViewModel.Create(x.chat_id,x.user_id))
+            var chats = chatsEntity
+                .Select(x => ChatModel.Create(x.chat_id,x.user_id))
                 .ToList();
 
-            return chatsEntity;
+            return chats;
+        }
+
+        public async Task<Guid> GetChat(string email_1, string email_2)
+        {
+            var chatEntity = await _db.chats
+                .Where(x1 => x1.user_id == email_1)
+                .Where(x1 => _db.chats.Any(x2 => x2.chat_id == x1.chat_id && x2.user_id == email_2))
+                .AsNoTracking()
+                .FirstOrDefaultAsync();
+
+            //var chat = ChatModel.Create(chatEntity.chat_id, chatEntity.user_id);
+            if (chatEntity.chat_id == Guid.Empty)
+                return Guid.Empty;
+
+            return chatEntity.chat_id;
         }
     }
 }

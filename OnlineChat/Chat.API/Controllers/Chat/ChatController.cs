@@ -1,4 +1,5 @@
 ﻿using Chat.Domain.Abstractions.Chat;
+using Chat.Domain.Models.Chat;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -15,17 +16,19 @@ namespace Chat.API.Controllers.Chat
             _chatServices = chatServices;
         }
         [HttpGet]
-        public async Task<List<>> GetChatsPreview()
+        public async Task<ActionResult<List<ChatViewModel>>> GetChatsPreview()
         {
-            IChatService
+            var email = User.FindFirst("email")?.Value;
+            var chats = await _chatServices.GetChatPreview(email);
+            return Ok(chats);
         }
         [HttpGet]
-        public async Task<> GetChat(string email)
+        public async Task<ActionResult<ChatViewModel>> GetChat(string email_2)
         {
-
+            var email_1 = User.FindFirst("email")?.Value;
+            var chat = await _chatServices.GetChat(email_1, email_2);
+            return Ok(chat);
         }
-
-
         [HttpPost]
         public async Task<ActionResult<Guid>> SendMessage(string email_2)
         {

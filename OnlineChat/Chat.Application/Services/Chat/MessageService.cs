@@ -15,13 +15,13 @@ namespace Chat.Application.Services.Chat
         {
             _messageRepository = messageRepository;
         }
-        public async Task<List<MessageModel>> GetMessage(string chat_id)
+        public async Task<List<MessageModel>> GetMessages(Guid chat_id)
         {
             var messages = await _messageRepository.Get(chat_id);
 
             return messages;
         }
-        public async Task<MessageModel> GetMessgaeLast(string chat_id)
+        public async Task<MessageModel> GetMessageLast(Guid chat_id)
         {
             var message = await _messageRepository.GetMessageLast(chat_id);
 

@@ -16,7 +16,7 @@ namespace Chat.Infrastructure.Repositories.Chat
         {
             _db = db;
         }
-        public async Task<MessageModel> GetMessageLast(string chatId)
+        public async Task<MessageModel> GetMessageLast(Guid chatId)
         {
             var messagesEntity = await _db.messages
                 .Where(x => x.chat_id == chatId)
@@ -31,7 +31,7 @@ namespace Chat.Infrastructure.Repositories.Chat
 
             return message;
         }
-        public async Task<List<MessageModel>> Get(string chatId)
+        public async Task<List<MessageModel>> Get(Guid chatId)
         {
             var messagesEntity = await _db.messages
                 .Where(x => x.chat_id == chatId)
@@ -43,6 +43,11 @@ namespace Chat.Infrastructure.Repositories.Chat
                 .ToList();
 
             return messages;
+        }
+
+        public async Task Add(string )
+        {
+
         }
     }
 }

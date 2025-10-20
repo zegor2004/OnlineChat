@@ -4,7 +4,7 @@ namespace Chat.Domain.Abstractions.Chat
 {
     public interface IMessageRepository
     {
-        Task<MessageModel> GetMessageLast(string chatId);
-        Task<List<MessageModel>> Get(string chatId);
+        Task<MessageModel> GetMessageLast(Guid chatId);
+        Task<List<MessageModel>> Get(Guid chatId);
     }
 }

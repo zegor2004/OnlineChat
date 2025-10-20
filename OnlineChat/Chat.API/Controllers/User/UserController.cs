@@ -20,9 +20,9 @@ namespace Chat.API.Controllers.User
         }
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<List<UserResponse>>> FindUser(FindUserRequest request)
+        public async Task<ActionResult<List<UserResponse>>> FindUserByName(FindUserRequest request)
         {
-            var users = await _usersService.FindUser(request.name);
+            var users = await _usersService.FindUserByName(request.name);
 
             var response = users.Select(b => new UserResponse(b.Email, b.Name));
 

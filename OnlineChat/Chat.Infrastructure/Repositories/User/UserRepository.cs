@@ -19,7 +19,18 @@ namespace Chat.Infrastructure.Repositories.User
         {
             _db = db;
         }
-        public async Task<List<UserModel>> Get(string name)
+
+        public async Task<UserModel> GetUserByEmail(string email)
+        {
+            var userEntity = await _db.users
+                .Where(x => x.email == email)
+                .FirstOrDefaultAsync();
+
+            var user = UserModel.Create(userEntity.email, string.Empty, userEntity.name);
+            
+            return user;
+        }
+        public async Task<List<UserModel>> GetUsersByName(string name)
         {
             var userEntites = await _db.users
                 .Where(x => EF.Functions.Like(x.name, $"{name}%"))
@@ -48,7 +59,7 @@ namespace Chat.Infrastructure.Repositories.User
             return userEntites.email;
         }
 
-        public async Task<string> GetByEmail(string email)
+        public async Task<string> GetPasswordByEmail(string email)
         {
             var userEntity = await _db.users
                 .FirstOrDefaultAsync(x => x.email == email);
