@@ -30,7 +30,7 @@ namespace Chat.Application.Services.Chat
             {
                 var message = await _messageServices.GetMessageLast(chat.ChatId);
                 var user = await _userService.GetUserByEmail(chat.UserId);
-                var chatView = ChatViewModel.Create(user, message);
+                var chatView = ChatViewModel.Create(chat.ChatId, user, message);
                 chatsView.Add(chatView);
             }
             return chatsView;
@@ -46,7 +46,7 @@ namespace Chat.Application.Services.Chat
 
             var user = await _userService.GetUserByEmail(email_2);
 
-            var chatView = ChatViewModel.Create(user,messages);
+            var chatView = ChatViewModel.Create(chatId, user, messages);
 
             return chatView;
         }
@@ -58,9 +58,9 @@ namespace Chat.Application.Services.Chat
             if (chatId == Guid.Empty) 
                 chatId = await _chatRepository.Create(email_1, email_2);
 
-            var message = MessageModel.Create(chatId, email_1, text);
+            var message = await _messageServices.SendMessage(chatId, email_1, text);
 
-
+            return message;
         }
     }
 }

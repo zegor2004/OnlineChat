@@ -34,6 +34,7 @@ namespace Chat.Domain.Models.User
         {
             string mes = string.Empty;
             string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            string passwordPattern = @"^[a-zA-Z0-9!@#$%^&*()_+\-=\[\]{};':""\\|,.<>\/?]*$";
             if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(name))
             {
                 mes = "All fields must be filled in";
@@ -47,6 +48,10 @@ namespace Chat.Domain.Models.User
             else if (!Regex.IsMatch(email, emailPattern))
             {
                 mes = "The email address is incorrect";
+            }
+            else if (!Regex.IsMatch(password, passwordPattern))
+            {
+                mes = "The password is incorrect";
             }
             return mes;
         }

@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contracts\Chat\" />
+    <Folder Include="Contracts\Chat\Response\" />
   </ItemGroup>
 
 </Project>

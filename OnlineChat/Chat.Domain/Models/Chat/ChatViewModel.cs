@@ -17,18 +17,18 @@ namespace Chat.Domain.Models.Chat
         }
         public Guid ChatId { get; }
         public UserModel User { get; }
-        List<MessageModel> Messages { get; }
+        public List<MessageModel> Messages { get; }
 
-        public static ChatViewModel Create(UserModel user, List<MessageModel> messages)
+        public static ChatViewModel Create(Guid guid, UserModel user, List<MessageModel> messages)
         {
-            var guid = Guid.NewGuid();
+            //var guid = Guid.NewGuid();
             var chat = new ChatViewModel(guid, user, messages);
             return chat;
         }
 
-        public static ChatViewModel Create(UserModel user, MessageModel message)
+        public static ChatViewModel Create(Guid guid,UserModel user, MessageModel message)
         {
-            var guid = Guid.NewGuid();
+            //var guid = Guid.NewGuid();
             var messages = new List<MessageModel>();
             messages.Add(message);
             var chat = new ChatViewModel(guid, user, messages);

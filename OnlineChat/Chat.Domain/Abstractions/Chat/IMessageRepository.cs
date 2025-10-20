@@ -6,5 +6,6 @@ namespace Chat.Domain.Abstractions.Chat
     {
         Task<MessageModel> GetMessageLast(Guid chatId);
         Task<List<MessageModel>> Get(Guid chatId);
+        Task Add(Guid chatId, string userId, string text, DateTime createdAt);
     }
 }

@@ -1,6 +1,52 @@
 [
   {
     "ContainingType": "Chat.API.Controllers.Chat.ChatController",
+    "Method": "GetChat",
+    "RelativePath": "Chat/GetChat",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Chat.API.Contracts.Chat.Request.GetChatRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Chat.Domain.Models.Chat.ChatViewModel",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Chat.API.Controllers.Chat.ChatController",
+    "Method": "GetChatsPreview",
+    "RelativePath": "Chat/GetChatsPreview",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Chat.Domain.Models.Chat.ChatViewModel, Chat.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Chat.API.Controllers.Chat.ChatController",
     "Method": "SendMessage",
     "RelativePath": "Chat/SendMessage",
     "HttpMethod": "POST",
@@ -8,14 +54,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "email_2",
-        "Type": "System.String",
-        "IsRequired": false
+        "Name": "request",
+        "Type": "Chat.API.Contracts.Chat.SendMessageRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Guid",
+        "Type": "Chat.Domain.Models.Chat.ChatModel",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -53,8 +99,8 @@
   },
   {
     "ContainingType": "Chat.API.Controllers.User.UserController",
-    "Method": "FindUser",
-    "RelativePath": "User/FindUser",
+    "Method": "FindUserByName",
+    "RelativePath": "User/FindUserByName",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

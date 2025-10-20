@@ -5,19 +5,10 @@
     "version": "1.0"
   },
   "paths": {
-    "/Chat/SendMessage": {
-      "post": {
+    "/Chat/GetChatsPreview": {
+      "get": {
         "tags": [
           "Chat"
-        ],
-        "parameters": [
-          {
-            "name": "email_2",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
         ],
         "responses": {
           "200": {
@@ -25,20 +16,26 @@
             "content": {
               "text/plain": {
                 "schema": {
-                  "type": "string",
-                  "format": "uuid"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChatViewModel"
+                  }
                 }
               },
               "application/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "uuid"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChatViewModel"
+                  }
                 }
               },
               "text/json": {
                 "schema": {
-                  "type": "string",
-                  "format": "uuid"
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ChatViewModel"
+                  }
                 }
               }
             }
@@ -46,7 +43,103 @@
         }
       }
     },
-    "/User/FindUser": {
+    "/Chat/GetChat": {
+      "get": {
+        "tags": [
+          "Chat"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetChatRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetChatRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetChatRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChatViewModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChatViewModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChatViewModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Chat/SendMessage": {
+      "post": {
+        "tags": [
+          "Chat"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendMessageRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendMessageRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SendMessageRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChatModel"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChatModel"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ChatModel"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/User/FindUserByName": {
       "get": {
         "tags": [
           "User"
@@ -299,10 +392,58 @@
   },
   "components": {
     "schemas": {
+      "ChatModel": {
+        "type": "object",
+        "properties": {
+          "chatId": {
+            "type": "string",
+            "format": "uuid",
+            "readOnly": true
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ChatViewModel": {
+        "type": "object",
+        "properties": {
+          "chatId": {
+            "type": "string",
+            "format": "uuid",
+            "readOnly": true
+          },
+          "user": {
+            "$ref": "#/components/schemas/UserModel"
+          },
+          "messages": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/MessageModel"
+            },
+            "nullable": true,
+            "readOnly": true
+          }
+        },
+        "additionalProperties": false
+      },
       "FindUserRequest": {
         "type": "object",
         "properties": {
           "name": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetChatRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
             "type": "string",
             "nullable": true
           }
@@ -323,6 +464,28 @@
         },
         "additionalProperties": false
       },
+      "MessageModel": {
+        "type": "object",
+        "properties": {
+          "chatId": {
+            "type": "string",
+            "format": "uuid"
+          },
+          "userId": {
+            "type": "string",
+            "nullable": true
+          },
+          "text": {
+            "type": "string",
+            "nullable": true
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "date-time"
+          }
+        },
+        "additionalProperties": false
+      },
       "RegUserRequest": {
         "type": "object",
         "properties": {
@@ -337,6 +500,41 @@
           "name": {
             "type": "string",
             "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SendMessageRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "text": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UserModel": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
+          },
+          "name": {
+            "type": "string",
+            "nullable": true,
+            "readOnly": true
           }
         },
         "additionalProperties": false

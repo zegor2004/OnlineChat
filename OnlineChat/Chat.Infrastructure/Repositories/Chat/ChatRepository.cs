@@ -45,7 +45,13 @@ namespace Chat.Infrastructure.Repositories.Chat
         {
 
             var chatsEntity = await _db.chats
-                .Where(x => x.user_id == email)
+                .Where(c1 => c1.user_id == email)  
+                .Join(_db.chats,                    
+                c1 => c1.chat_id,               
+                c2 => c2.chat_id,               
+                (c1, c2) => new { c1, c2 })    
+                .Where(x => x.c2.user_id != email)  
+                .Select(x => x.c2)
                 .AsNoTracking()
                 .ToListAsync();
 
@@ -65,7 +71,7 @@ namespace Chat.Infrastructure.Repositories.Chat
                 .FirstOrDefaultAsync();
 
             //var chat = ChatModel.Create(chatEntity.chat_id, chatEntity.user_id);
-            if (chatEntity.chat_id == Guid.Empty)
+            if (chatEntity == null)
                 return Guid.Empty;
 
             return chatEntity.chat_id;

@@ -1,5 +1,7 @@
 ﻿using Chat.Domain.Abstractions.Chat;
 using Chat.Domain.Models.Chat;
+using Chat.Infrastructure.Entites.Chat;
+using Chat.Infrastructure.Entites.User;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -45,8 +47,18 @@ namespace Chat.Infrastructure.Repositories.Chat
             return messages;
         }
 
-        public async Task Add(string )
+        public async Task Add(Guid chatId, string userId, string text, DateTime createdAt)
         {
+            var messageEntity = new MessageEntity
+            {
+                chat_id = chatId,
+                user_id = userId,
+                text = text,
+                created_at = createdAt
+            };
+
+            await _db.AddAsync(messageEntity);
+            await _db.SaveChangesAsync();
 
         }
     }
