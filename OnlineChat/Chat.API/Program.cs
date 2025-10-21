@@ -2,8 +2,10 @@ using Chat.Application.Services.Chat;
 using Chat.Application.Services.User;
 using Chat.Domain.Abstractions.Auth;
 using Chat.Domain.Abstractions.Chat;
+using Chat.Domain.Abstractions.Chat.Message;
 using Chat.Domain.Abstractions.User;
 using Chat.Infrastructure;
+using Chat.Infrastructure.Hubs;
 using Chat.Infrastructure.Repositories.Chat;
 using Chat.Infrastructure.Repositories.User;
 using Chat.Infrastructure.Services.Auth;
@@ -26,6 +28,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddProblemDetails();
+builder.Services.AddSignalR();
 
 
 builder.Services.AddDbContext<ChatDbContext>(
@@ -80,5 +83,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
 app.UseExceptionHandler();
+
+app.MapHub<ChatHub>("/chathub");
 
 app.Run();

@@ -1,152 +1,160 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\",
+  "WorkspaceRootPath": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.domain\\models\\user\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\models\\user\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\hubs\\chathub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.domain\\models\\chat\\chatmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\models\\chat\\chatmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.domain\\models\\chat\\messagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\models\\chat\\messagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.domain\\models\\chat\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\models\\chat\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}|Chat.Application\\Chat.Application.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.application\\services\\chat\\chatservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}|Chat.Application\\Chat.Application.csproj|solutionrelative:chat.application\\services\\chat\\chatservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.api\\controllers\\user\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\controllers\\user\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.api\\contracts\\chat\\request\\getchatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\contracts\\chat\\request\\getchatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\repositories\\chat\\chatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\repositories\\chat\\chatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.api\\controllers\\chat\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\controllers\\chat\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\repositories\\chat\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\repositories\\chat\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\entites\\chat\\messageentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\entites\\chat\\messageentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}|Chat.Application\\Chat.Application.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.application\\services\\chat\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}|Chat.Application\\Chat.Application.csproj|solutionrelative:chat.application\\services\\chat\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\chat\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\abstractions\\chat\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\entites\\chat\\chatentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\entites\\chat\\chatentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.api\\contracts\\user\\request\\finduserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\contracts\\user\\request\\finduserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.api\\contracts\\chat\\request\\sendmessagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\contracts\\chat\\request\\sendmessagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\chat\\ichatservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\abstractions\\chat\\ichatservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.domain\\models\\chat\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\models\\chat\\chatviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\chat\\imessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\abstractions\\chat\\imessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.domain\\models\\chat\\messagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\models\\chat\\messagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}|Chat.Application\\Chat.Application.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.application\\services\\user\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}|Chat.Application\\Chat.Application.csproj|solutionrelative:chat.application\\services\\user\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.domain\\models\\user\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\models\\user\\usermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.domain\\models\\chat\\chatmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\models\\chat\\chatmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\entites\\user\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\chat.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\chat.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}|Chat.Application\\Chat.Application.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.application\\services\\chat\\chatservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}|Chat.Application\\Chat.Application.csproj|solutionrelative:chat.application\\services\\chat\\chatservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}|Chat.Application\\Chat.Application.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.application\\services\\chat\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}|Chat.Application\\Chat.Application.csproj|solutionrelative:chat.application\\services\\chat\\messageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\repositories\\chat\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\repositories\\chat\\messagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\entites\\chat\\messageentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\entites\\chat\\messageentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\entites\\user\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\entites\\user\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\chat\\ichatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\entites\\chat\\chatentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\entites\\chat\\chatentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.api\\controllers\\user\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\controllers\\user\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.api\\contracts\\chat\\request\\getchatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\contracts\\chat\\request\\getchatrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\repositories\\chat\\chatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\repositories\\chat\\chatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.api\\controllers\\chat\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\controllers\\chat\\chatcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\chat\\message\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\abstractions\\chat\\message\\imessageservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.api\\contracts\\user\\request\\finduserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\contracts\\user\\request\\finduserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.api\\contracts\\chat\\request\\sendmessagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\contracts\\chat\\request\\sendmessagerequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\chat\\ichatservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\abstractions\\chat\\ichatservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\chat\\message\\imessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\abstractions\\chat\\message\\imessagerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}|Chat.Application\\Chat.Application.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.application\\services\\user\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{384C3AD2-3825-4DC6-B8A8-471FFC7D32F4}|Chat.Application\\Chat.Application.csproj|solutionrelative:chat.application\\services\\user\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\repositories\\user\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\chat\\ichatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\abstractions\\chat\\ichatrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\user\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\user\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\abstractions\\user\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\abstractions\\user\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\services\\auth\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\services\\auth\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\services\\auth\\jwtoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\services\\auth\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\services\\auth\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\services\\auth\\passwordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\chatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\chatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\chatdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\configurations\\user\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\configurations\\user\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\configurations\\user\\userconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\configurations\\chat\\chatconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\configurations\\chat\\chatconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\configurations\\chat\\chatconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.api\\contracts\\user\\request\\loginuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.api\\contracts\\user\\request\\loginuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\contracts\\user\\request\\loginuserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.api\\contracts\\user\\request\\reguserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.api\\contracts\\user\\request\\reguserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\contracts\\user\\request\\reguserrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.api\\contracts\\user\\response\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.api\\contracts\\user\\response\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4659A85E-8CB1-4925-9BD6-64747647BC6C}|Chat.API\\Chat.API.csproj|solutionrelative:chat.api\\contracts\\user\\response\\userresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\auth\\ijwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\auth\\ijwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\abstractions\\auth\\ijwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\services\\auth\\jwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.infrastructure\\services\\auth\\jwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FEFFB435-9778-4DA8-9F4C-A175939BFF53}|Chat.Infrastructure\\Chat.Infrastructure.csproj|solutionrelative:chat.infrastructure\\services\\auth\\jwtprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\zorin_ea\\AppData\\Roaming\\Microsoft\\UserSecrets\\0fb970c8-8f3d-4d46-a7b5-def6b2cd4745\\secrets.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zegor\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\auth\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|c:\\users\\zorin_ea\\desktop\\onlinechat\\onlinechat\\chat.domain\\abstractions\\auth\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BA3A9D7D-BEB6-4BD0-9F5B-EA5420094FCC}|Chat.Domain\\Chat.Domain.csproj|solutionrelative:chat.domain\\abstractions\\auth\\ipasswordhasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -157,15 +165,136 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ChatHub.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Hubs\\ChatHub.cs",
+              "RelativeDocumentMoniker": "Chat.Infrastructure\\Hubs\\ChatHub.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Hubs\\ChatHub.cs",
+              "RelativeToolTip": "Chat.Infrastructure\\Hubs\\ChatHub.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-21T05:31:57.208Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "Chat.Infrastructure",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Chat.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "Chat.Infrastructure\\Chat.Infrastructure.csproj",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Chat.Infrastructure.csproj",
+              "RelativeToolTip": "Chat.Infrastructure\\Chat.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-10-21T05:29:25.598Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MessageEntity.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Entites\\Chat\\MessageEntity.cs",
+              "RelativeDocumentMoniker": "Chat.Infrastructure\\Entites\\Chat\\MessageEntity.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Entites\\Chat\\MessageEntity.cs",
+              "RelativeToolTip": "Chat.Infrastructure\\Entites\\Chat\\MessageEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T17:59:47.465Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserEntity.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Entites\\User\\UserEntity.cs",
+              "RelativeDocumentMoniker": "Chat.Infrastructure\\Entites\\User\\UserEntity.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Entites\\User\\UserEntity.cs",
+              "RelativeToolTip": "Chat.Infrastructure\\Entites\\User\\UserEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T16:00:31.366Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Program.cs",
+              "RelativeDocumentMoniker": "Chat.API\\Program.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Program.cs",
+              "RelativeToolTip": "Chat.API\\Program.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAAAFYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T17:13:44.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChatModel.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\Chat\\ChatModel.cs",
+              "RelativeDocumentMoniker": "Chat.Domain\\Models\\Chat\\ChatModel.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\Chat\\ChatModel.cs",
+              "RelativeToolTip": "Chat.Domain\\Models\\Chat\\ChatModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-19T16:40:37.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ChatViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\Chat\\ChatViewModel.cs",
+              "RelativeDocumentMoniker": "Chat.Domain\\Models\\Chat\\ChatViewModel.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\Chat\\ChatViewModel.cs",
+              "RelativeToolTip": "Chat.Domain\\Models\\Chat\\ChatViewModel.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACcAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T08:23:31.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MessageModel.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\Chat\\MessageModel.cs",
+              "RelativeDocumentMoniker": "Chat.Domain\\Models\\Chat\\MessageModel.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\Chat\\MessageModel.cs",
+              "RelativeToolTip": "Chat.Domain\\Models\\Chat\\MessageModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T08:04:33.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserModel.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\User\\UserModel.cs",
+              "RelativeDocumentMoniker": "Chat.Domain\\Models\\User\\UserModel.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\User\\UserModel.cs",
+              "RelativeToolTip": "Chat.Domain\\Models\\User\\UserModel.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADwvzsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-14T17:29:13.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "GetChatRequest.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\Chat\\Request\\GetChatRequest.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\Chat\\Request\\GetChatRequest.cs",
               "RelativeDocumentMoniker": "Chat.API\\Contracts\\Chat\\Request\\GetChatRequest.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\Chat\\Request\\GetChatRequest.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\Chat\\Request\\GetChatRequest.cs",
               "RelativeToolTip": "Chat.API\\Contracts\\Chat\\Request\\GetChatRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -174,154 +303,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ChatViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\Chat\\ChatViewModel.cs",
-              "RelativeDocumentMoniker": "Chat.Domain\\Models\\Chat\\ChatViewModel.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\Chat\\ChatViewModel.cs",
-              "RelativeToolTip": "Chat.Domain\\Models\\Chat\\ChatViewModel.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAWwBkAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T08:23:31.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "MessageService.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Application\\Services\\Chat\\MessageService.cs",
-              "RelativeDocumentMoniker": "Chat.Application\\Services\\Chat\\MessageService.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Application\\Services\\Chat\\MessageService.cs",
-              "RelativeToolTip": "Chat.Application\\Services\\Chat\\MessageService.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwCIAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T08:31:18.605Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MessageModel.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\Chat\\MessageModel.cs",
-              "RelativeDocumentMoniker": "Chat.Domain\\Models\\Chat\\MessageModel.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\Chat\\MessageModel.cs",
-              "RelativeToolTip": "Chat.Domain\\Models\\Chat\\MessageModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T08:04:33.53Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ChatRepository.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Repositories\\Chat\\ChatRepository.cs",
-              "RelativeDocumentMoniker": "Chat.Infrastructure\\Repositories\\Chat\\ChatRepository.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Repositories\\Chat\\ChatRepository.cs",
-              "RelativeToolTip": "Chat.Infrastructure\\Repositories\\Chat\\ChatRepository.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAowDEAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T06:47:32.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ChatServices.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Application\\Services\\Chat\\ChatServices.cs",
-              "RelativeDocumentMoniker": "Chat.Application\\Services\\Chat\\ChatServices.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Application\\Services\\Chat\\ChatServices.cs",
-              "RelativeToolTip": "Chat.Application\\Services\\Chat\\ChatServices.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwCAAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T08:16:54.632Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ChatModel.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\Chat\\ChatModel.cs",
-              "RelativeDocumentMoniker": "Chat.Domain\\Models\\Chat\\ChatModel.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\Chat\\ChatModel.cs",
-              "RelativeToolTip": "Chat.Domain\\Models\\Chat\\ChatModel.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-19T16:40:37.857Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserModel.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\User\\UserModel.cs",
-              "RelativeDocumentMoniker": "Chat.Domain\\Models\\User\\UserModel.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Models\\User\\UserModel.cs",
-              "RelativeToolTip": "Chat.Domain\\Models\\User\\UserModel.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAA9wDMAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:29:13.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Controllers\\User\\UserController.cs",
-              "RelativeDocumentMoniker": "Chat.API\\Controllers\\User\\UserController.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Controllers\\User\\UserController.cs",
-              "RelativeToolTip": "Chat.API\\Controllers\\User\\UserController.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA4wBwAAABCAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T17:25:30.371Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MessageRepository.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Repositories\\Chat\\MessageRepository.cs",
-              "RelativeDocumentMoniker": "Chat.Infrastructure\\Repositories\\Chat\\MessageRepository.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Repositories\\Chat\\MessageRepository.cs",
-              "RelativeToolTip": "Chat.Infrastructure\\Repositories\\Chat\\MessageRepository.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAA5wCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-18T08:30:37.474Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MessageEntity.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Entites\\Chat\\MessageEntity.cs",
-              "RelativeDocumentMoniker": "Chat.Infrastructure\\Entites\\Chat\\MessageEntity.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Entites\\Chat\\MessageEntity.cs",
-              "RelativeToolTip": "Chat.Infrastructure\\Entites\\Chat\\MessageEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAsAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T17:59:47.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ChatController.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Controllers\\Chat\\ChatController.cs",
-              "RelativeDocumentMoniker": "Chat.API\\Controllers\\Chat\\ChatController.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Controllers\\Chat\\ChatController.cs",
-              "RelativeToolTip": "Chat.API\\Controllers\\Chat\\ChatController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T09:59:25.241Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "ChatEntity.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Entites\\Chat\\ChatEntity.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Entites\\Chat\\ChatEntity.cs",
               "RelativeDocumentMoniker": "Chat.Infrastructure\\Entites\\Chat\\ChatEntity.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Entites\\Chat\\ChatEntity.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Entites\\Chat\\ChatEntity.cs",
               "RelativeToolTip": "Chat.Infrastructure\\Entites\\Chat\\ChatEntity.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -330,12 +316,90 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 9,
+              "Title": "MessageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Repositories\\Chat\\MessageRepository.cs",
+              "RelativeDocumentMoniker": "Chat.Infrastructure\\Repositories\\Chat\\MessageRepository.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Repositories\\Chat\\MessageRepository.cs",
+              "RelativeToolTip": "Chat.Infrastructure\\Repositories\\Chat\\MessageRepository.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAuwCoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T08:30:37.474Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Controllers\\User\\UserController.cs",
+              "RelativeDocumentMoniker": "Chat.API\\Controllers\\User\\UserController.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Controllers\\User\\UserController.cs",
+              "RelativeToolTip": "Chat.API\\Controllers\\User\\UserController.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwBwAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-15T17:25:30.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MessageService.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Application\\Services\\Chat\\MessageService.cs",
+              "RelativeDocumentMoniker": "Chat.Application\\Services\\Chat\\MessageService.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Application\\Services\\Chat\\MessageService.cs",
+              "RelativeToolTip": "Chat.Application\\Services\\Chat\\MessageService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwB4AAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-18T08:31:18.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChatServices.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Application\\Services\\Chat\\ChatServices.cs",
+              "RelativeDocumentMoniker": "Chat.Application\\Services\\Chat\\ChatServices.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Application\\Services\\Chat\\ChatServices.cs",
+              "RelativeToolTip": "Chat.Application\\Services\\Chat\\ChatServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T08:16:54.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ChatRepository.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Repositories\\Chat\\ChatRepository.cs",
+              "RelativeDocumentMoniker": "Chat.Infrastructure\\Repositories\\Chat\\ChatRepository.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Repositories\\Chat\\ChatRepository.cs",
+              "RelativeToolTip": "Chat.Infrastructure\\Repositories\\Chat\\ChatRepository.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAowDEAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T06:47:32.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ChatController.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Controllers\\Chat\\ChatController.cs",
+              "RelativeDocumentMoniker": "Chat.API\\Controllers\\Chat\\ChatController.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Controllers\\Chat\\ChatController.cs",
+              "RelativeToolTip": "Chat.API\\Controllers\\Chat\\ChatController.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-17T09:59:25.241Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "IMessageService.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\IMessageService.cs",
-              "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\Chat\\IMessageService.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\IMessageService.cs",
-              "RelativeToolTip": "Chat.Domain\\Abstractions\\Chat\\IMessageService.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\Message\\IMessageService.cs",
+              "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\Chat\\Message\\IMessageService.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\Message\\IMessageService.cs",
+              "RelativeToolTip": "Chat.Domain\\Abstractions\\Chat\\Message\\IMessageService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-19T12:56:29.225Z",
@@ -343,11 +407,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "FindUserRequest.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Request\\FindUserRequest.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Request\\FindUserRequest.cs",
               "RelativeDocumentMoniker": "Chat.API\\Contracts\\User\\Request\\FindUserRequest.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Request\\FindUserRequest.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Request\\FindUserRequest.cs",
               "RelativeToolTip": "Chat.API\\Contracts\\User\\Request\\FindUserRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -356,11 +420,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "SendMessageRequest.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\Chat\\Request\\SendMessageRequest.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\Chat\\Request\\SendMessageRequest.cs",
               "RelativeDocumentMoniker": "Chat.API\\Contracts\\Chat\\Request\\SendMessageRequest.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\Chat\\Request\\SendMessageRequest.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\Chat\\Request\\SendMessageRequest.cs",
               "RelativeToolTip": "Chat.API\\Contracts\\Chat\\Request\\SendMessageRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -369,12 +433,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 21,
               "Title": "IMessageRepository.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\IMessageRepository.cs",
-              "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\Chat\\IMessageRepository.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\IMessageRepository.cs",
-              "RelativeToolTip": "Chat.Domain\\Abstractions\\Chat\\IMessageRepository.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\Message\\IMessageRepository.cs",
+              "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\Chat\\Message\\IMessageRepository.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\Message\\IMessageRepository.cs",
+              "RelativeToolTip": "Chat.Domain\\Abstractions\\Chat\\Message\\IMessageRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAgAAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-18T08:30:18.279Z",
@@ -382,24 +446,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Program.cs",
-              "RelativeDocumentMoniker": "Chat.API\\Program.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Program.cs",
-              "RelativeToolTip": "Chat.API\\Program.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAD0AAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-14T17:13:44.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 20,
               "Title": "IChatServices.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\IChatServices.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\IChatServices.cs",
               "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\Chat\\IChatServices.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\IChatServices.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\IChatServices.cs",
               "RelativeToolTip": "Chat.Domain\\Abstractions\\Chat\\IChatServices.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -408,24 +459,24 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 22,
               "Title": "UserService.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Application\\Services\\User\\UserService.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Application\\Services\\User\\UserService.cs",
               "RelativeDocumentMoniker": "Chat.Application\\Services\\User\\UserService.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Application\\Services\\User\\UserService.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Application\\Services\\User\\UserService.cs",
               "RelativeToolTip": "Chat.Application\\Services\\User\\UserService.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAA8wCsAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAmwCsAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-15T17:07:55.336Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 23,
               "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Repositories\\User\\UserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Repositories\\User\\UserRepository.cs",
               "RelativeDocumentMoniker": "Chat.Infrastructure\\Repositories\\User\\UserRepository.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Repositories\\User\\UserRepository.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Repositories\\User\\UserRepository.cs",
               "RelativeToolTip": "Chat.Infrastructure\\Repositories\\User\\UserRepository.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAowDgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -434,196 +485,198 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UserEntity.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Entites\\User\\UserEntity.cs",
-              "RelativeDocumentMoniker": "Chat.Infrastructure\\Entites\\User\\UserEntity.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Entites\\User\\UserEntity.cs",
-              "RelativeToolTip": "Chat.Infrastructure\\Entites\\User\\UserEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 24,
+              "Title": "IChatRepository.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\IChatRepository.cs",
+              "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\Chat\\IChatRepository.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\IChatRepository.cs",
+              "RelativeToolTip": "Chat.Domain\\Abstractions\\Chat\\IChatRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T16:00:31.366Z",
+              "WhenOpened": "2025-10-17T08:14:17.032Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "IChatRepository.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\IChatRepository.cs",
-              "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\Chat\\IChatRepository.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Chat\\IChatRepository.cs",
-              "RelativeToolTip": "Chat.Domain\\Abstractions\\Chat\\IChatRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T08:14:17.032Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 25,
               "Title": "IUserService.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\User\\IUserService.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\User\\IUserService.cs",
               "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\User\\IUserService.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\User\\IUserService.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\User\\IUserService.cs",
               "RelativeToolTip": "Chat.Domain\\Abstractions\\User\\IUserService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-16T09:18:39.361Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\User\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\User\\IUserRepository.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\User\\IUserRepository.cs",
-              "RelativeToolTip": "Chat.Domain\\Abstractions\\User\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T16:52:25.71Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "JwtOptions.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Services\\Auth\\JwtOptions.cs",
-              "RelativeDocumentMoniker": "Chat.Infrastructure\\Services\\Auth\\JwtOptions.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Services\\Auth\\JwtOptions.cs",
-              "RelativeToolTip": "Chat.Infrastructure\\Services\\Auth\\JwtOptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T16:38:16.215Z"
+              "WhenOpened": "2025-08-16T09:18:39.361Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 26,
-              "Title": "PasswordHasher.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Services\\Auth\\PasswordHasher.cs",
-              "RelativeDocumentMoniker": "Chat.Infrastructure\\Services\\Auth\\PasswordHasher.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Services\\Auth\\PasswordHasher.cs",
-              "RelativeToolTip": "Chat.Infrastructure\\Services\\Auth\\PasswordHasher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\User\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\User\\IUserRepository.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\User\\IUserRepository.cs",
+              "RelativeToolTip": "Chat.Domain\\Abstractions\\User\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T15:44:36.864Z"
+              "WhenOpened": "2025-08-15T16:52:25.71Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 27,
-              "Title": "ChatDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\ChatDbContext.cs",
-              "RelativeDocumentMoniker": "Chat.Infrastructure\\ChatDbContext.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\ChatDbContext.cs",
-              "RelativeToolTip": "Chat.Infrastructure\\ChatDbContext.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAQwBsAAAAAAAAAAAAAAA==",
+              "Title": "JwtOptions.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Services\\Auth\\JwtOptions.cs",
+              "RelativeDocumentMoniker": "Chat.Infrastructure\\Services\\Auth\\JwtOptions.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Services\\Auth\\JwtOptions.cs",
+              "RelativeToolTip": "Chat.Infrastructure\\Services\\Auth\\JwtOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T15:58:10.449Z"
+              "WhenOpened": "2025-10-15T16:38:16.215Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 28,
-              "Title": "UserConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Configurations\\User\\UserConfiguration.cs",
-              "RelativeDocumentMoniker": "Chat.Infrastructure\\Configurations\\User\\UserConfiguration.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Configurations\\User\\UserConfiguration.cs",
-              "RelativeToolTip": "Chat.Infrastructure\\Configurations\\User\\UserConfiguration.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAeAAAAAAAAAA==",
+              "Title": "PasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Services\\Auth\\PasswordHasher.cs",
+              "RelativeDocumentMoniker": "Chat.Infrastructure\\Services\\Auth\\PasswordHasher.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Services\\Auth\\PasswordHasher.cs",
+              "RelativeToolTip": "Chat.Infrastructure\\Services\\Auth\\PasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T04:44:21.918Z"
+              "WhenOpened": "2025-10-15T15:44:36.864Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 29,
-              "Title": "ChatConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Configurations\\Chat\\ChatConfiguration.cs",
-              "RelativeDocumentMoniker": "Chat.Infrastructure\\Configurations\\Chat\\ChatConfiguration.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Configurations\\Chat\\ChatConfiguration.cs",
-              "RelativeToolTip": "Chat.Infrastructure\\Configurations\\Chat\\ChatConfiguration.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAcwBQAAAAeAAAAAAAAAA==",
+              "Title": "ChatDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\ChatDbContext.cs",
+              "RelativeDocumentMoniker": "Chat.Infrastructure\\ChatDbContext.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\ChatDbContext.cs",
+              "RelativeToolTip": "Chat.Infrastructure\\ChatDbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAQwBsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-16T08:43:40.802Z"
+              "WhenOpened": "2025-08-15T15:58:10.449Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 30,
-              "Title": "LoginUserRequest.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Request\\LoginUserRequest.cs",
-              "RelativeDocumentMoniker": "Chat.API\\Contracts\\User\\Request\\LoginUserRequest.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Request\\LoginUserRequest.cs",
-              "RelativeToolTip": "Chat.API\\Contracts\\User\\Request\\LoginUserRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Configurations\\User\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "Chat.Infrastructure\\Configurations\\User\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Configurations\\User\\UserConfiguration.cs",
+              "RelativeToolTip": "Chat.Infrastructure\\Configurations\\User\\UserConfiguration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBkAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-17T14:36:51.821Z"
+              "WhenOpened": "2025-10-15T04:44:21.918Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 31,
-              "Title": "RegUserRequest.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Request\\RegUserRequest.cs",
-              "RelativeDocumentMoniker": "Chat.API\\Contracts\\User\\Request\\RegUserRequest.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Request\\RegUserRequest.cs",
-              "RelativeToolTip": "Chat.API\\Contracts\\User\\Request\\RegUserRequest.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Title": "ChatConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Configurations\\Chat\\ChatConfiguration.cs",
+              "RelativeDocumentMoniker": "Chat.Infrastructure\\Configurations\\Chat\\ChatConfiguration.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Configurations\\Chat\\ChatConfiguration.cs",
+              "RelativeToolTip": "Chat.Infrastructure\\Configurations\\Chat\\ChatConfiguration.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAcwBQAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T17:45:49.205Z"
+              "WhenOpened": "2025-10-16T08:43:40.802Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 32,
-              "Title": "UserResponse.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Response\\UserResponse.cs",
-              "RelativeDocumentMoniker": "Chat.API\\Contracts\\User\\Response\\UserResponse.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Response\\UserResponse.cs",
-              "RelativeToolTip": "Chat.API\\Contracts\\User\\Response\\UserResponse.cs",
+              "Title": "LoginUserRequest.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Request\\LoginUserRequest.cs",
+              "RelativeDocumentMoniker": "Chat.API\\Contracts\\User\\Request\\LoginUserRequest.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Request\\LoginUserRequest.cs",
+              "RelativeToolTip": "Chat.API\\Contracts\\User\\Request\\LoginUserRequest.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T17:30:05.727Z"
+              "WhenOpened": "2025-10-17T14:36:51.821Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 33,
-              "Title": "IJwtProvider.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Auth\\IJwtProvider.cs",
-              "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\Auth\\IJwtProvider.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Auth\\IJwtProvider.cs",
-              "RelativeToolTip": "Chat.Domain\\Abstractions\\Auth\\IJwtProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "RegUserRequest.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Request\\RegUserRequest.cs",
+              "RelativeDocumentMoniker": "Chat.API\\Contracts\\User\\Request\\RegUserRequest.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Request\\RegUserRequest.cs",
+              "RelativeToolTip": "Chat.API\\Contracts\\User\\Request\\RegUserRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T16:51:02.802Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "IPasswordHasher.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Auth\\IPasswordHasher.cs",
-              "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\Auth\\IPasswordHasher.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Auth\\IPasswordHasher.cs",
-              "RelativeToolTip": "Chat.Domain\\Abstractions\\Auth\\IPasswordHasher.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T15:51:14.95Z"
+              "WhenOpened": "2025-08-15T17:45:49.205Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 34,
-              "Title": "JwtProvider.cs",
-              "DocumentMoniker": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Services\\Auth\\JwtProvider.cs",
-              "RelativeDocumentMoniker": "Chat.Infrastructure\\Services\\Auth\\JwtProvider.cs",
-              "ToolTip": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Services\\Auth\\JwtProvider.cs",
-              "RelativeToolTip": "Chat.Infrastructure\\Services\\Auth\\JwtProvider.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Title": "UserResponse.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Response\\UserResponse.cs",
+              "RelativeDocumentMoniker": "Chat.API\\Contracts\\User\\Response\\UserResponse.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.API\\Contracts\\User\\Response\\UserResponse.cs",
+              "RelativeToolTip": "Chat.API\\Contracts\\User\\Response\\UserResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T16:23:26.253Z"
+              "WhenOpened": "2025-08-15T17:30:05.727Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 35,
+              "Title": "IJwtProvider.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Auth\\IJwtProvider.cs",
+              "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\Auth\\IJwtProvider.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Auth\\IJwtProvider.cs",
+              "RelativeToolTip": "Chat.Domain\\Abstractions\\Auth\\IJwtProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T16:51:02.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "IPasswordHasher.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Auth\\IPasswordHasher.cs",
+              "RelativeDocumentMoniker": "Chat.Domain\\Abstractions\\Auth\\IPasswordHasher.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Abstractions\\Auth\\IPasswordHasher.cs",
+              "RelativeToolTip": "Chat.Domain\\Abstractions\\Auth\\IPasswordHasher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T15:51:14.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "JwtProvider.cs",
+              "DocumentMoniker": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Services\\Auth\\JwtProvider.cs",
+              "RelativeDocumentMoniker": "Chat.Infrastructure\\Services\\Auth\\JwtProvider.cs",
+              "ToolTip": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Infrastructure\\Services\\Auth\\JwtProvider.cs",
+              "RelativeToolTip": "Chat.Infrastructure\\Services\\Auth\\JwtProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T16:23:26.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
               "Title": "secrets.json",
               "DocumentMoniker": "C:\\Users\\zorin_ea\\AppData\\Roaming\\Microsoft\\UserSecrets\\0fb970c8-8f3d-4d46-a7b5-def6b2cd4745\\secrets.json",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\zorin_ea\\AppData\\Roaming\\Microsoft\\UserSecrets\\0fb970c8-8f3d-4d46-a7b5-def6b2cd4745\\secrets.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\0fb970c8-8f3d-4d46-a7b5-def6b2cd4745\\secrets.json",
               "ToolTip": "C:\\Users\\zorin_ea\\AppData\\Roaming\\Microsoft\\UserSecrets\\0fb970c8-8f3d-4d46-a7b5-def6b2cd4745\\secrets.json",
-              "RelativeToolTip": "..\\..\\..\\..\\zorin_ea\\AppData\\Roaming\\Microsoft\\UserSecrets\\0fb970c8-8f3d-4d46-a7b5-def6b2cd4745\\secrets.json",
+              "RelativeToolTip": "..\\..\\..\\AppData\\Roaming\\Microsoft\\UserSecrets\\0fb970c8-8f3d-4d46-a7b5-def6b2cd4745\\secrets.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-10-16T06:00:55.67Z"
+              "WhenOpened": "2025-10-16T06:00:55.67Z",
+              "EditorCaption": ""
             }
           ]
         }

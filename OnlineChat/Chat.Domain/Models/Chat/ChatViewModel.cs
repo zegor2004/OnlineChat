@@ -34,5 +34,16 @@ namespace Chat.Domain.Models.Chat
             var chat = new ChatViewModel(guid, user, messages);
             return chat;
         }
+
+        public static ChatViewModel CreateEmpty()
+        {
+            var messageEmpty = new List<MessageModel>();
+
+            var userEmpty = UserModel.Create(string.Empty, string.Empty, string.Empty);
+
+            var chat = new ChatViewModel(Guid.Empty, userEmpty, messageEmpty);
+            
+            return chat;
+        }
     }
 }

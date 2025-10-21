@@ -467,10 +467,6 @@
       "MessageModel": {
         "type": "object",
         "properties": {
-          "chatId": {
-            "type": "string",
-            "format": "uuid"
-          },
           "userId": {
             "type": "string",
             "nullable": true

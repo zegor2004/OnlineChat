@@ -1,4 +1,4 @@
-﻿using Chat.Domain.Abstractions.Chat;
+﻿using Chat.Domain.Abstractions.Chat.Message;
 using Chat.Domain.Models.Chat;
 using System;
 using System.Collections.Generic;
@@ -30,9 +30,9 @@ namespace Chat.Application.Services.Chat
 
         public async Task<MessageModel> SendMessage(Guid chatId, string email, string text)
         {
-            var message = MessageModel.Create(chatId, email, text);
+            var message = MessageModel.Create(email, text);
 
-            await _messageRepository.Add(message.ChatId, message.UserId, message.Text, message.CreatedAt);
+            await _messageRepository.Add(chatId, message.UserId, message.Text, message.CreatedAt);
 
             return message;
         }

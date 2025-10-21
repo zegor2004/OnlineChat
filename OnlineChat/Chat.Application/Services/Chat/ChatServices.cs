@@ -4,8 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Chat.Domain.Abstractions.Chat;
+using Chat.Domain.Abstractions.Chat.Message;
 using Chat.Domain.Abstractions.User;
 using Chat.Domain.Models.Chat;
+using Chat.Domain.Models.User;
 
 namespace Chat.Application.Services.Chat
 {
@@ -40,7 +42,7 @@ namespace Chat.Application.Services.Chat
             var chatId = await _chatRepository.GetChat(email_1,email_2);
 
             if (chatId == Guid.Empty)
-                return null;
+                return ChatViewModel.CreateEmpty();
 
             var messages = await _messageServices.GetMessages(chatId);
 
