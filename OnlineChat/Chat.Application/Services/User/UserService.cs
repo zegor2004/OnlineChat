@@ -22,11 +22,11 @@ namespace Chat.Application.Services.User
             _passwordHasher = passwordHasher;
             _jwtProvider = jwtProvider;
         }
-        public async Task<UserModel> GetUserByUserId(Guid userId)
+        public async Task<UserViewModel> GetUserByUserId(Guid userId)
         {
             return await _usersRerositry.GetUserByUserId(userId);
         }
-        public async Task<List<UserModel>> FindUserByName(string name)
+        public async Task<List<UserViewModel>> FindUserByName(string name)
         {
             return await _usersRerositry.GetUsersByName(name);
         }

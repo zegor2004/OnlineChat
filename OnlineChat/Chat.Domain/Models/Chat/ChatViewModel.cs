@@ -9,24 +9,24 @@ namespace Chat.Domain.Models.Chat
 {
     public class ChatViewModel
     {
-        private ChatViewModel(Guid chatId, UserModel user, List<MessageModel> messages)
+        private ChatViewModel(Guid chatId, UserViewModel user, List<MessageModel> messages)
         {
             ChatId = chatId;
             User = user;
             Messages = messages;
         }
         public Guid ChatId { get; }
-        public UserModel User { get; }
+        public UserViewModel User { get; }
         public List<MessageModel> Messages { get; }
 
-        public static ChatViewModel Create(Guid guid, UserModel user, List<MessageModel> messages)
+        public static ChatViewModel Create(Guid guid, UserViewModel user, List<MessageModel> messages)
         {
             //var guid = Guid.NewGuid();
             var chat = new ChatViewModel(guid, user, messages);
             return chat;
         }
 
-        public static ChatViewModel Create(Guid guid,UserModel user, MessageModel message)
+        public static ChatViewModel Create(Guid guid, UserViewModel user, MessageModel message)
         {
             //var guid = Guid.NewGuid();
             var messages = new List<MessageModel>();
@@ -39,7 +39,7 @@ namespace Chat.Domain.Models.Chat
         {
             var messageEmpty = new List<MessageModel>();
 
-            var userEmpty = UserModel.Create(Guid.Empty, string.Empty, string.Empty, string.Empty);
+            var userEmpty = UserViewModel.Create(Guid.Empty, string.Empty);
 
             var chat = new ChatViewModel(Guid.Empty, userEmpty, messageEmpty);
             

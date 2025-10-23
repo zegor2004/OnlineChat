@@ -26,40 +26,39 @@ namespace Chat.API.Controllers.User
 
             var response = users.Select(b => new UserResponse(b.UserId, b.Name));
 
-            //var email = User.FindFirst(ClaimTypes.Email)?.Value;
             return Ok(response);
         }
         [HttpPost]
-        public async Task<ActionResult<string>> Registration(RegUserRequest request)
+        public async Task<ActionResult> Registration(RegUserRequest request)
         {
             var mes = await _usersService.Registration(request.Email, request.Password, request.Name);
 
             if (!string.IsNullOrEmpty(mes)) 
                 return BadRequest(mes);
 
-            return Ok(mes);
+            return Ok("ok");
         }
         [HttpPost]
-        public async Task<ActionResult<string>> Login(LoginUserRequest request)
+        public async Task<ActionResult> Login(LoginUserRequest request)
         {
             var token = await _usersService.Login(request.Email, request.Password);
             if (string.IsNullOrEmpty(token)) 
                 return BadRequest("Invalid email/password");
             return Ok(token);
         }
-        [HttpPut]
-        public async Task<ActionResult<string>> UpdateUserData(RegUserRequest request)
-        {
-            var email = await _usersService.UpdateUser(request.Email, request.Password, request.Name);
+        //[HttpPut]
+        //public async Task<ActionResult<string>> UpdateUserData(RegUserRequest request)
+        //{
+        //    var email = await _usersService.UpdateUser(request.Email, request.Password, request.Name);
 
-            return Ok(email);
-        }
-        [HttpDelete("{Email}")]
-        public async Task<ActionResult<string>> DeleteUser(string Email)
-        {
-            var email = await _usersService.DeleteUser(Email);
+        //    return Ok(email);
+        //}
+        //[HttpDelete("{Email}")]
+        //public async Task<ActionResult<string>> DeleteUser(string Email)
+        //{
+        //    var email = await _usersService.DeleteUser(Email);
 
-            return NoContent();
-        }
+        //    return NoContent();
+        //}
     }
 }

@@ -31,6 +31,11 @@ namespace Chat.Domain.Models.User
             UserModel user = new UserModel(userId, email, password, name);
             return user;
         }
+        public static UserModel CreateEmpty()
+        {
+            UserModel user = new UserModel(Guid.Empty, string.Empty, string.Empty, string.Empty);
+            return user;
+        }
 
         public static string DataValidation(string email, string password, string name)
         {

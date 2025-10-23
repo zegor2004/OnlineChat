@@ -26,24 +26,24 @@ namespace Chat.Infrastructure.Repositories.User
                 .Where(x => x.email == email)
                 .AsNoTracking()
                 .FirstOrDefaultAsync();
-
+            if (userEntity == null) return UserModel.CreateEmpty();
             var user = UserModel.Create(userEntity.id, userEntity.email, userEntity.password_hash, userEntity.name);
             
             return user;
         }
 
-        public async Task<UserModel> GetUserByUserId(Guid userId)
+        public async Task<UserViewModel> GetUserByUserId(Guid userId)
         {
             var userEntity = await _db.users
                 .Where(x => x.id == userId)
                 .AsNoTracking()
                 .FirstOrDefaultAsync();
 
-            var user = UserModel.Create(userEntity.id, string.Empty, string.Empty, userEntity.name);
+            var user = UserViewModel.Create(userEntity.id, userEntity.name);
 
             return user;
         }
-        public async Task<List<UserModel>> GetUsersByName(string name)
+        public async Task<List<UserViewModel>> GetUsersByName(string name)
         {
             var userEntites = await _db.users
                 .Where(x => EF.Functions.Like(x.name, $"{name}%"))
@@ -51,7 +51,7 @@ namespace Chat.Infrastructure.Repositories.User
                 .ToListAsync();
 
             var users = userEntites
-                .Select(x => UserModel.Create(x.id, x.email, string.Empty, x.name))
+                .Select(x => UserViewModel.Create(x.id, x.name))
                 .ToList();
 
             return users;

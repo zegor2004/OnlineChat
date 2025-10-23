@@ -33,7 +33,7 @@ namespace Chat.API.Controllers.Chat
             return Ok(chat);
         }
         [HttpPost]
-        public async Task<ActionResult<ChatModel>> SendMessage(SendMessageRequest request)
+        public async Task<ActionResult<MessageModel>> SendMessage(SendMessageRequest request)
         {
             var userIdFrom = new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
             var message = await _chatServices.SendMessage(userIdFrom, request.userId, request.text);
