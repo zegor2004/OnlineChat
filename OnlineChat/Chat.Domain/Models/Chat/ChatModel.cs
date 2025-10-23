@@ -8,15 +8,15 @@ namespace Chat.Domain.Models.Chat
 {
     public class ChatModel
     {
-        private ChatModel(Guid chatId, string userId)
+        private ChatModel(Guid chatId, Guid userId)
         {
             ChatId = chatId;
             UserId = userId;
         }
         public Guid ChatId { get; }
-        public string UserId { get; } = string.Empty;
+        public Guid UserId { get; }
 
-        public static ChatModel Create(Guid chatId, string userId)
+        public static ChatModel Create(Guid chatId, Guid userId)
         {
             var chat = new ChatModel(chatId, userId);
             return chat;

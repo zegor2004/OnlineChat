@@ -24,10 +24,23 @@ namespace Chat.Infrastructure.Repositories.User
         {
             var userEntity = await _db.users
                 .Where(x => x.email == email)
+                .AsNoTracking()
                 .FirstOrDefaultAsync();
 
-            var user = UserModel.Create(userEntity.email, string.Empty, userEntity.name);
+            var user = UserModel.Create(userEntity.id, userEntity.email, userEntity.password_hash, userEntity.name);
             
+            return user;
+        }
+
+        public async Task<UserModel> GetUserByUserId(Guid userId)
+        {
+            var userEntity = await _db.users
+                .Where(x => x.id == userId)
+                .AsNoTracking()
+                .FirstOrDefaultAsync();
+
+            var user = UserModel.Create(userEntity.id, string.Empty, string.Empty, userEntity.name);
+
             return user;
         }
         public async Task<List<UserModel>> GetUsersByName(string name)
@@ -38,16 +51,17 @@ namespace Chat.Infrastructure.Repositories.User
                 .ToListAsync();
 
             var users = userEntites
-                .Select(x => UserModel.Create(x.email, string.Empty, x.name))
+                .Select(x => UserModel.Create(x.id, x.email, string.Empty, x.name))
                 .ToList();
 
             return users;
         }
 
-        public async Task<string> Create(string email, string passwordHash, string name)
+        public async Task<string> Create(Guid id, string email, string passwordHash, string name)
         {
             var userEntites = new UserEntity
             {
+                id = id,
                 email = email,
                 password_hash = passwordHash,
                 name = name,
@@ -59,14 +73,14 @@ namespace Chat.Infrastructure.Repositories.User
             return userEntites.email;
         }
 
-        public async Task<string> GetPasswordByEmail(string email)
+        public async Task<bool> GetUserBusy(string email)
         {
             var userEntity = await _db.users
                 .FirstOrDefaultAsync(x => x.email == email);
 
-            if (userEntity == null) return string.Empty;
+            if (userEntity == null) return false;
             //var user = ChatUser.Create(userEntity.Email, userEntity.PasswordHash, userEntity.Name);
-            return userEntity.password_hash;
+            return true;
         }
 
         public async Task<string> Update(string email, string passwordHash, string name)

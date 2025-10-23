@@ -1,7 +1,7 @@
 ﻿namespace Chat.API.Contracts.User.Response
 {
     public record UserResponse(
-        string Email,
+        Guid userId,
         string Name);
 
 }

@@ -8,23 +8,23 @@ namespace Chat.Domain.Models.Chat
 {
     public class MessageModel
     {
-        private MessageModel(string userId, string text, DateTime createdAt)
+        private MessageModel(Guid userId, string text, DateTime createdAt)
         {
             UserId = userId;
             Text = text;
             CreatedAt = createdAt;
         }
-        public string UserId { get; set; } = string.Empty;
-        public string Text { get; set;} = string.Empty;
-        public DateTime CreatedAt { get; set; }
+        public Guid UserId { get;}
+        public string Text { get; } = string.Empty;
+        public DateTime CreatedAt { get; }
 
-        public static MessageModel Create(string userId, string text, DateTime createdAt)
+        public static MessageModel Create(Guid userId, string text, DateTime createdAt)
         {
             var message = new MessageModel(userId, text, createdAt);
             return message;
         }
 
-        public static MessageModel Create(string userId, string text)
+        public static MessageModel Create(Guid userId, string text)
         {
             var createdAt = DateTime.UtcNow;
             var message = new MessageModel(userId, text, createdAt);

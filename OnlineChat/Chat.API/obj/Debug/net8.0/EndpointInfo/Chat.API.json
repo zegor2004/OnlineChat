@@ -402,7 +402,7 @@
           },
           "userId": {
             "type": "string",
-            "nullable": true,
+            "format": "uuid",
             "readOnly": true
           }
         },
@@ -443,9 +443,9 @@
       "GetChatRequest": {
         "type": "object",
         "properties": {
-          "email": {
+          "userId": {
             "type": "string",
-            "nullable": true
+            "format": "uuid"
           }
         },
         "additionalProperties": false
@@ -469,15 +469,18 @@
         "properties": {
           "userId": {
             "type": "string",
-            "nullable": true
+            "format": "uuid",
+            "readOnly": true
           },
           "text": {
             "type": "string",
-            "nullable": true
+            "nullable": true,
+            "readOnly": true
           },
           "createdAt": {
             "type": "string",
-            "format": "date-time"
+            "format": "date-time",
+            "readOnly": true
           }
         },
         "additionalProperties": false
@@ -503,9 +506,9 @@
       "SendMessageRequest": {
         "type": "object",
         "properties": {
-          "email": {
+          "userId": {
             "type": "string",
-            "nullable": true
+            "format": "uuid"
           },
           "text": {
             "type": "string",
@@ -517,6 +520,11 @@
       "UserModel": {
         "type": "object",
         "properties": {
+          "userId": {
+            "type": "string",
+            "format": "uuid",
+            "readOnly": true
+          },
           "email": {
             "type": "string",
             "nullable": true,
@@ -538,9 +546,9 @@
       "UserResponse": {
         "type": "object",
         "properties": {
-          "email": {
+          "userId": {
             "type": "string",
-            "nullable": true
+            "format": "uuid"
           },
           "name": {
             "type": "string",

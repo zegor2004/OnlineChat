@@ -46,7 +46,7 @@ namespace Chat.Infrastructure.Repositories.Chat
             return messages;
         }
 
-        public async Task Add(Guid chatId, string userId, string text, DateTime createdAt)
+        public async Task Add(Guid chatId, Guid userId, string text, DateTime createdAt)
         {
             var messageEntity = new MessageEntity
             {

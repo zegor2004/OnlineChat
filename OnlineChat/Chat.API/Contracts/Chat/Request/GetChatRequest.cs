@@ -2,6 +2,6 @@
 {
     public record GetChatRequest
     (
-        string email
+        Guid userId
     );
 }

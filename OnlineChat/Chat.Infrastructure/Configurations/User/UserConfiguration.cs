@@ -11,7 +11,7 @@ namespace Chat.Infrastructure.Configurations.User
         {
             builder.HasKey(x => x.id);
             builder.Property(x => x.id)
-                .ValueGeneratedOnAdd();
+                .IsRequired();
 
             builder.Property(x => x.email)
                 .IsRequired();

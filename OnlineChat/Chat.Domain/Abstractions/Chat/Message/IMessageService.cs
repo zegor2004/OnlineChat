@@ -6,6 +6,6 @@ namespace Chat.Domain.Abstractions.Chat.Message
     {
         Task<List<MessageModel>> GetMessages(Guid chat_id);
         Task<MessageModel> GetMessageLast(Guid chat_id);
-        Task<MessageModel> SendMessage(Guid chatId, string userId, string text);
+        Task<MessageModel> SendMessage(Guid chatId, Guid userId, string text);
     }
 }

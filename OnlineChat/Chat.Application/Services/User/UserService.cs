@@ -22,9 +22,9 @@ namespace Chat.Application.Services.User
             _passwordHasher = passwordHasher;
             _jwtProvider = jwtProvider;
         }
-        public async Task<UserModel> GetUserByEmail(string email)
+        public async Task<UserModel> GetUserByUserId(Guid userId)
         {
-            return await _usersRerositry.GetUserByEmail(email);
+            return await _usersRerositry.GetUserByUserId(userId);
         }
         public async Task<List<UserModel>> FindUserByName(string name)
         {
@@ -36,23 +36,25 @@ namespace Chat.Application.Services.User
             var mes = UserModel.DataValidation(email, password, name);
             if (!string.IsNullOrEmpty(mes)) return mes;
 
-            var _user = await _usersRerositry.GetPasswordByEmail(email);
-            if (!string.IsNullOrEmpty(_user)) return "This email is already busy";
+            var emailIsBusy = await _usersRerositry.GetUserBusy(email);
+            if (emailIsBusy) return "This email is already busy";
 
             var passwordHash = _passwordHasher.Generate(password);
 
-            var emails = await _usersRerositry.Create(email, passwordHash, name);
+            var userId = Guid.NewGuid();
+
+            var emails = await _usersRerositry.Create(userId, email, passwordHash, name);
 
             return string.Empty;
         }
 
         public async Task<string> Login(string email, string password)
         {
-            string passwordHash = await _usersRerositry.GetPasswordByEmail(email);
-            if (string.IsNullOrEmpty(passwordHash) || !_passwordHasher.Verify(password, passwordHash))
+            var user = await _usersRerositry.GetUserByEmail(email);
+            if (string.IsNullOrEmpty(user.Password) || !_passwordHasher.Verify(password, user.Password))
                 return string.Empty;
 
-            var token = _jwtProvider.GenerateToken(email);
+            var token = _jwtProvider.GenerateToken(user.UserId.ToString());
 
             return token;
         }

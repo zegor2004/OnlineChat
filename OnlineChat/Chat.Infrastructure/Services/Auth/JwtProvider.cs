@@ -15,9 +15,9 @@ namespace Chat.Infrastructure.Services.Auth
     {
         private readonly JwtOptions _options = options.Value;
 
-        public string GenerateToken(string email)
+        public string GenerateToken(string userId)
         {
-            Claim[] claims = [new("email", email)];
+            Claim[] claims = [new(ClaimTypes.NameIdentifier, userId)];
             var signalCredentials = new SigningCredentials(
                 new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_options.SecretKey)),
                 SecurityAlgorithms.HmacSha256);

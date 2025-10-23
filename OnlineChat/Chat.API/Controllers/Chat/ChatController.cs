@@ -21,22 +21,22 @@ namespace Chat.API.Controllers.Chat
         [HttpGet]
         public async Task<ActionResult<List<ChatViewModel>>> GetChatsPreview()
         {
-            var email = User.FindFirst(ClaimTypes.Email)?.Value;
-            var chats = await _chatServices.GetChatPreview(email);
+            var userId = new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            var chats = await _chatServices.GetChatPreview(userId);
             return Ok(chats);
         }
         [HttpGet]
         public async Task<ActionResult<ChatViewModel>> GetChat(GetChatRequest request)
         {
-            var email_1 = User.FindFirst(ClaimTypes.Email)?.Value;
-            var chat = await _chatServices.GetChat(email_1, request.email);
+            var userIdFrom = new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            var chat = await _chatServices.GetChat(userIdFrom, request.userId);
             return Ok(chat);
         }
         [HttpPost]
         public async Task<ActionResult<ChatModel>> SendMessage(SendMessageRequest request)
         {
-            var email_1 = User.FindFirst(ClaimTypes.Email)?.Value;
-            var message = await _chatServices.SendMessage(email_1, request.email, request.text);
+            var userIdFrom = new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            var message = await _chatServices.SendMessage(userIdFrom, request.userId, request.text);
             return Ok(message);
         }
     }

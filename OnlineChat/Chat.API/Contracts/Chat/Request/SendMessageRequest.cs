@@ -2,7 +2,7 @@
 {
     public record SendMessageRequest
     (
-        string email,
+        Guid userId,
         string text
     );
 }

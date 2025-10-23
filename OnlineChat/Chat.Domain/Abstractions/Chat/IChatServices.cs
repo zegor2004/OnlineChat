@@ -3,8 +3,8 @@ namespace Chat.Domain.Abstractions.Chat
 {
     public interface IChatServices
     {
-        Task<List<ChatViewModel>> GetChatPreview(string email);
-        Task<ChatViewModel> GetChat(string email_1, string email_2);
-        Task<MessageModel> SendMessage(string email_1, string email_2, string text);
+        Task<List<ChatViewModel>> GetChatPreview(Guid userId);
+        Task<ChatViewModel> GetChat(Guid userIdFrom, Guid UserIdTo);
+        Task<MessageModel> SendMessage(Guid userIdFrom, Guid UserIdTo, string text);
     }
 }

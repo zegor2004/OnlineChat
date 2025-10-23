@@ -39,7 +39,7 @@ namespace Chat.Domain.Models.Chat
         {
             var messageEmpty = new List<MessageModel>();
 
-            var userEmpty = UserModel.Create(string.Empty, string.Empty, string.Empty);
+            var userEmpty = UserModel.Create(Guid.Empty, string.Empty, string.Empty, string.Empty);
 
             var chat = new ChatViewModel(Guid.Empty, userEmpty, messageEmpty);
             

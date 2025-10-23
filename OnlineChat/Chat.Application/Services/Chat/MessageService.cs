@@ -28,9 +28,9 @@ namespace Chat.Application.Services.Chat
             return message;
         }
 
-        public async Task<MessageModel> SendMessage(Guid chatId, string email, string text)
+        public async Task<MessageModel> SendMessage(Guid chatId, Guid UserId, string text)
         {
-            var message = MessageModel.Create(email, text);
+            var message = MessageModel.Create(UserId, text);
 
             await _messageRepository.Add(chatId, message.UserId, message.Text, message.CreatedAt);
 

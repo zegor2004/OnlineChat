@@ -10,6 +10,6 @@ namespace Chat.Infrastructure.Entites.Chat
     {
         public int id { get; set; }
         public Guid chat_id { get; set; }
-        public string user_id { get; set; } = string.Empty;
+        public Guid user_id { get; set; }
     }
 }

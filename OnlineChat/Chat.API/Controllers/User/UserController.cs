@@ -24,7 +24,7 @@ namespace Chat.API.Controllers.User
         {
             var users = await _usersService.FindUserByName(request.name);
 
-            var response = users.Select(b => new UserResponse(b.Email, b.Name));
+            var response = users.Select(b => new UserResponse(b.UserId, b.Name));
 
             //var email = User.FindFirst(ClaimTypes.Email)?.Value;
             return Ok(response);
@@ -44,7 +44,7 @@ namespace Chat.API.Controllers.User
         {
             var token = await _usersService.Login(request.Email, request.Password);
             if (string.IsNullOrEmpty(token)) 
-                return BadRequest("Invalid email or password");
+                return BadRequest("Invalid email/password");
             return Ok(token);
         }
         [HttpPut("{Email}")]

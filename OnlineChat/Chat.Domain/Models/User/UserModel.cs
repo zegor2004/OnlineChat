@@ -9,12 +9,14 @@ namespace Chat.Domain.Models.User
 {
     public class UserModel
     {
-        private UserModel(string email, string password, string name)
+        private UserModel(Guid userId, string email, string password, string name)
         {
+            UserId = userId;
             Email = email;
             Password = password;
             Name = name;
         }
+        public Guid UserId { get; }
         public string Email { get; } = string.Empty;
         public string Password { get; } = string.Empty;
         public string Name { get; } = string.Empty;
@@ -24,9 +26,9 @@ namespace Chat.Domain.Models.User
         private const int MaxLenghtName = 15;
         private const int MinLenghtPassword = 5;
         private const int MinLenghtName = 5;
-        public static UserModel Create(string email, string password, string name)
+        public static UserModel Create(Guid userId, string email, string password, string name)
         {
-            UserModel user = new UserModel(email, password, name);
+            UserModel user = new UserModel(userId, email, password, name);
             return user;
         }
 
