@@ -47,10 +47,10 @@ namespace Chat.API.Controllers.User
                 return BadRequest("Invalid email/password");
             return Ok(token);
         }
-        [HttpPut("{Email}")]
-        public async Task<ActionResult<string>> UpdateUser(string Email, [FromBody] RegUserRequest request)
+        [HttpPut]
+        public async Task<ActionResult<string>> UpdateUserData(RegUserRequest request)
         {
-            var email = await _usersService.UpdateUser(Email, request.Password, request.Name);
+            var email = await _usersService.UpdateUser(request.Email, request.Password, request.Name);
 
             return Ok(email);
         }

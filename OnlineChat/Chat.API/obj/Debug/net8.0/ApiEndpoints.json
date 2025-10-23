@@ -177,17 +177,12 @@
   },
   {
     "ContainingType": "Chat.API.Controllers.User.UserController",
-    "Method": "UpdateUser",
-    "RelativePath": "User/UpdateUser/{Email}",
+    "Method": "UpdateUserData",
+    "RelativePath": "User/UpdateUserData",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
-      {
-        "Name": "Email",
-        "Type": "System.String",
-        "IsRequired": true
-      },
       {
         "Name": "request",
         "Type": "Chat.API.Contracts.User.Request.RegUserRequest",

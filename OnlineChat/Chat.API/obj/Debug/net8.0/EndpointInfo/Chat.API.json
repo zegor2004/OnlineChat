@@ -292,20 +292,10 @@
         }
       }
     },
-    "/User/UpdateUser/{Email}": {
+    "/User/UpdateUserData": {
       "put": {
         "tags": [
           "User"
-        ],
-        "parameters": [
-          {
-            "name": "Email",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
         ],
         "requestBody": {
           "content": {
