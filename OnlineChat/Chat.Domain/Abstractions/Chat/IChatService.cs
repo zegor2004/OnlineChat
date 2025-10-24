@@ -1,7 +1,7 @@
 ﻿using Chat.Domain.Models.Chat;
 namespace Chat.Domain.Abstractions.Chat
 {
-    public interface IChatServices
+    public interface IChatService
     {
         Task<List<ChatViewModel>> GetChatPreview(Guid userId);
         Task<ChatViewModel> GetChat(Guid userIdFrom, Guid UserIdTo);

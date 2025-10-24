@@ -46,7 +46,7 @@ namespace Chat.Infrastructure.Repositories.Chat
             return messages;
         }
 
-        public async Task Add(Guid chatId, Guid userId, string text, DateTime createdAt)
+        public async Task<bool> Add(Guid chatId, Guid userId, string text, DateTime createdAt)
         {
             var messageEntity = new MessageEntity
             {
@@ -57,8 +57,9 @@ namespace Chat.Infrastructure.Repositories.Chat
             };
 
             await _db.AddAsync(messageEntity);
-            await _db.SaveChangesAsync();
+            var result = await _db.SaveChangesAsync();
 
+            return result > 0;
         }
     }
 }

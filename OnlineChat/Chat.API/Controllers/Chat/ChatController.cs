@@ -13,29 +13,41 @@ namespace Chat.API.Controllers.Chat
     [Route("[controller]/[action]")]
     public class ChatController : ControllerBase
     {
-        private readonly IChatServices _chatServices;
-        public ChatController(IChatServices chatServices)
+        private readonly IChatService _chatServices;
+        public ChatController(IChatService chatServices)
         {
             _chatServices = chatServices;
         }
         [HttpGet]
         public async Task<ActionResult<List<ChatViewModel>>> GetChatsPreview()
         {
-            var userId = new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            var nameIdentifier = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (nameIdentifier == null) return Unauthorized();
+            var userId = new Guid(nameIdentifier.Value);
+
             var chats = await _chatServices.GetChatPreview(userId);
+            if (chats.Count == 0) return NoContent();
+            
             return Ok(chats);
         }
         [HttpGet]
         public async Task<ActionResult<ChatViewModel>> GetChat(GetChatRequest request)
         {
-            var userIdFrom = new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            var nameIdentifier = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (nameIdentifier == null) return Unauthorized();
+            var userIdFrom = new Guid(nameIdentifier.Value);
+
             var chat = await _chatServices.GetChat(userIdFrom, request.userId);
+            if (chat.ChatId == Guid.Empty) return NoContent();
+
             return Ok(chat);
         }
         [HttpPost]
         public async Task<ActionResult<MessageModel>> SendMessage(SendMessageRequest request)
         {
-            var userIdFrom = new Guid(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+            var nameIdentifier = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (nameIdentifier == null) return Unauthorized();
+            var userIdFrom = new Guid(nameIdentifier.Value);
             var message = await _chatServices.SendMessage(userIdFrom, request.userId, request.text);
             return Ok(message);
         }

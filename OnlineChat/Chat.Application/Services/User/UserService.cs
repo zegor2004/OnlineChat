@@ -1,7 +1,6 @@
 ﻿using Chat.Domain.Abstractions.Auth;
 using Chat.Domain.Abstractions.User;
 using Chat.Domain.Models.User;
-using Chat.Infrastructure.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,9 +25,9 @@ namespace Chat.Application.Services.User
         {
             return await _usersRerositry.GetUserByUserId(userId);
         }
-        public async Task<List<UserViewModel>> FindUserByName(string name)
+        public async Task<List<UserViewModel>> FindUserByName(Guid userId, string name)
         {
-            return await _usersRerositry.GetUsersByName(name);
+            return await _usersRerositry.GetUsersByName(userId, name);
         }
 
         public async Task<string> Registration(string email, string password, string name)
@@ -43,7 +42,8 @@ namespace Chat.Application.Services.User
 
             var userId = Guid.NewGuid();
 
-            var emails = await _usersRerositry.Create(userId, email, passwordHash, name);
+            var result = await _usersRerositry.Create(userId, email, passwordHash, name);
+            if (!result) return "Error";
 
             return string.Empty;
         }

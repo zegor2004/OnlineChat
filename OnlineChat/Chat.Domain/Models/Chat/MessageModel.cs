@@ -18,6 +18,7 @@ namespace Chat.Domain.Models.Chat
         public string Text { get; } = string.Empty;
         public DateTime CreatedAt { get; }
 
+        private const int MaxTextLenght = 500;
         public static MessageModel Create(Guid userId, string text, DateTime createdAt)
         {
             var message = new MessageModel(userId, text, createdAt);
@@ -28,6 +29,13 @@ namespace Chat.Domain.Models.Chat
         {
             var createdAt = DateTime.UtcNow;
             var message = new MessageModel(userId, text, createdAt);
+            return message;
+        }
+
+        public static MessageModel CreateEmpty()
+        {
+            var createdAt = DateTime.UtcNow;
+            var message = new MessageModel(Guid.Empty, string.Empty, createdAt);
             return message;
         }
     }

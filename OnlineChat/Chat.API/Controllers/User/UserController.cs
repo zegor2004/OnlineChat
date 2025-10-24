@@ -22,10 +22,15 @@ namespace Chat.API.Controllers.User
         [Authorize]
         public async Task<ActionResult<List<UserResponse>>> FindUserByName(FindUserRequest request)
         {
-            var users = await _usersService.FindUserByName(request.name);
+            var nameIdentifier = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (nameIdentifier == null) return Unauthorized();
+
+            var userId = new Guid(nameIdentifier.Value);
+
+            var users = await _usersService.FindUserByName(userId, request.name);
+            if (users.Count == 0) return NoContent();
 
             var response = users.Select(b => new UserResponse(b.UserId, b.Name));
-
             return Ok(response);
         }
         [HttpPost]
@@ -36,7 +41,7 @@ namespace Chat.API.Controllers.User
             if (!string.IsNullOrEmpty(mes)) 
                 return BadRequest(mes);
 
-            return Ok("ok");
+            return Ok("Account created");
         }
         [HttpPost]
         public async Task<ActionResult> Login(LoginUserRequest request)
@@ -47,7 +52,7 @@ namespace Chat.API.Controllers.User
             return Ok(token);
         }
         //[HttpPut]
-        //public async Task<ActionResult<string>> UpdateUserData(RegUserRequest request)
+        //public async Task<ActionResult> UpdateUserData(RegUserRequest request)
         //{
         //    var email = await _usersService.UpdateUser(request.Email, request.Password, request.Name);
 

@@ -8,15 +8,16 @@ using Chat.Domain.Abstractions.Chat.Message;
 using Chat.Domain.Abstractions.User;
 using Chat.Domain.Models.Chat;
 using Chat.Domain.Models.User;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Chat.Application.Services.Chat
 {
-    public class ChatServices : IChatServices
+    public class ChatService : IChatService
     {
         private readonly IChatRepository _chatRepository;
         private readonly IMessageService _messageServices;
         private readonly IUserService _userService;
-        public ChatServices(IChatRepository chatRepository, IMessageService messageService, IUserService userService)
+        public ChatService(IChatRepository chatRepository, IMessageService messageService, IUserService userService)
         {
             _chatRepository = chatRepository;
             _messageServices = messageService;
@@ -43,7 +44,7 @@ namespace Chat.Application.Services.Chat
 
             if (chatId == Guid.Empty)
                 return ChatViewModel.CreateEmpty();
-
+            
             var messages = await _messageServices.GetMessages(chatId);
 
             var user = await _userService.GetUserByUserId(userIdTo);

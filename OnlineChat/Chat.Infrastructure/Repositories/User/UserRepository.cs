@@ -43,10 +43,10 @@ namespace Chat.Infrastructure.Repositories.User
 
             return user;
         }
-        public async Task<List<UserViewModel>> GetUsersByName(string name)
+        public async Task<List<UserViewModel>> GetUsersByName(Guid userId, string name)
         {
             var userEntites = await _db.users
-                .Where(x => EF.Functions.Like(x.name, $"{name}%"))
+                .Where(x => EF.Functions.Like(x.name, $"{name}%") && x.id != userId)
                 .AsNoTracking()
                 .ToListAsync();
 
@@ -57,7 +57,7 @@ namespace Chat.Infrastructure.Repositories.User
             return users;
         }
 
-        public async Task<string> Create(Guid id, string email, string passwordHash, string name)
+        public async Task<bool> Create(Guid id, string email, string passwordHash, string name)
         {
             var userEntites = new UserEntity
             {
@@ -68,9 +68,9 @@ namespace Chat.Infrastructure.Repositories.User
                 created_at = DateTime.UtcNow
             };
             await _db.AddAsync(userEntites);
-            await _db.SaveChangesAsync();
+            var result = await _db.SaveChangesAsync();
 
-            return userEntites.email;
+            return result > 0;
         }
 
         public async Task<bool> GetUserBusy(string email)

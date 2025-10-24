@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Chat.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f913ba10cf50dae19e75ba01b44cd3353adcbcc2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ea01cd2610c9231fac027a2d862761afbe7acedd")]
 [assembly: System.Reflection.AssemblyProductAttribute("Chat.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Chat.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
