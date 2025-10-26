@@ -1,5 +1,6 @@
 ﻿using Chat.Infrastructure.Entites.Chat;
 using Chat.Infrastructure.Entites.User;
+using Chat.Infrastructure.Entities.User;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -23,5 +24,6 @@ namespace Chat.Infrastructure
 
         public DbSet<ChatEntity> chats { get; set; } = null!;
         public DbSet<MessageEntity> messages { get; set; } = null!;
+        public DbSet<SessionEntity> sessions { get; set; } = null!;
     }
 }

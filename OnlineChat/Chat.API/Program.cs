@@ -84,6 +84,6 @@ app.UseAuthorization();
 app.MapControllers();
 app.UseExceptionHandler();
 
-app.MapHub<ChatHub>("/chathub");
+app.MapHub<ChatHub>("/update");
 
 app.Run();

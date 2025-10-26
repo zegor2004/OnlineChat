@@ -26,7 +26,7 @@ namespace Chat.API.Controllers.Chat
             var userId = new Guid(nameIdentifier.Value);
 
             var chats = await _chatServices.GetChatPreview(userId);
-            if (chats.Count == 0) return NoContent();
+            if (chats.Count == 0) return NotFound();
             
             return Ok(chats);
         }
@@ -38,7 +38,7 @@ namespace Chat.API.Controllers.Chat
             var userIdFrom = new Guid(nameIdentifier.Value);
 
             var chat = await _chatServices.GetChat(userIdFrom, request.userId);
-            if (chat.ChatId == Guid.Empty) return NoContent();
+            if (chat.ChatId == Guid.Empty) return NotFound();
 
             return Ok(chat);
         }

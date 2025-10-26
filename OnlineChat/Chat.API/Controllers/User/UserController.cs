@@ -28,7 +28,7 @@ namespace Chat.API.Controllers.User
             var userId = new Guid(nameIdentifier.Value);
 
             var users = await _usersService.FindUserByName(userId, request.name);
-            if (users.Count == 0) return NoContent();
+            if (users.Count == 0) return NotFound();
 
             var response = users.Select(b => new UserResponse(b.UserId, b.Name));
             return Ok(response);
@@ -40,8 +40,8 @@ namespace Chat.API.Controllers.User
 
             if (!string.IsNullOrEmpty(mes)) 
                 return BadRequest(mes);
-
-            return Ok("Account created");
+            
+            return NoContent();
         }
         [HttpPost]
         public async Task<ActionResult> Login(LoginUserRequest request)
