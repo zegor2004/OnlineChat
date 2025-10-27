@@ -3,10 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Chat.Application.Services.User.Session;
 using Chat.Domain.Abstractions.Chat;
 using Chat.Domain.Abstractions.Chat.Message;
+using Chat.Domain.Abstractions.Hub;
 using Chat.Domain.Abstractions.User;
+using Chat.Domain.Abstractions.User.Session;
 using Chat.Domain.Models.Chat;
+using Chat.Domain.Models.Chat.Message;
 using Chat.Domain.Models.User;
 using Microsoft.AspNetCore.Http.HttpResults;
 
@@ -17,11 +21,15 @@ namespace Chat.Application.Services.Chat
         private readonly IChatRepository _chatRepository;
         private readonly IMessageService _messageServices;
         private readonly IUserService _userService;
-        public ChatService(IChatRepository chatRepository, IMessageService messageService, IUserService userService)
+        private readonly ISessionService _sessionService;
+        private readonly IChatHubService _chatHubService;
+        public ChatService(IChatRepository chatRepository, IMessageService messageService, IUserService userService, ISessionService sessionService, IChatHubService chatHubService)
         {
             _chatRepository = chatRepository;
             _messageServices = messageService;
             _userService = userService;
+            _sessionService = sessionService;
+            _chatHubService = chatHubService;
         }
         public async Task<List<ChatViewModel>> GetChatPreview(Guid UserId)
         {
@@ -62,6 +70,9 @@ namespace Chat.Application.Services.Chat
                 chatId = await _chatRepository.Create(userIdFrom, userIdTo);
 
             var message = await _messageServices.SendMessage(chatId, userIdFrom, text);
+
+            //var sessions = await _sessionService.GetSessionUserByUserId(userIdTo);
+            await _chatHubService.NotificationNewMessage(message.Text, userIdTo);
 
             return message;
         }

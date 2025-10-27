@@ -1,19 +1,23 @@
 using Chat.Application.Services.Chat;
+using Chat.Application.Services.Chat.Message;
 using Chat.Application.Services.User;
+using Chat.Application.Services.User.Session;
 using Chat.Domain.Abstractions.Auth;
 using Chat.Domain.Abstractions.Chat;
 using Chat.Domain.Abstractions.Chat.Message;
+using Chat.Domain.Abstractions.Hub;
 using Chat.Domain.Abstractions.User;
+using Chat.Domain.Abstractions.User.Session;
 using Chat.Infrastructure;
 using Chat.Infrastructure.Hubs;
 using Chat.Infrastructure.Repositories.Chat;
+using Chat.Infrastructure.Repositories.Chat.Message;
 using Chat.Infrastructure.Repositories.User;
+using Chat.Infrastructure.Repositories.User.Session;
 using Chat.Infrastructure.Services.Auth;
+using Chat.Infrastructure.Services.Hub;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using System.Text;
@@ -63,6 +67,9 @@ builder.Services.AddScoped<IChatRepository, ChatRepository>();
 builder.Services.AddScoped<IChatService, ChatService>();
 builder.Services.AddScoped<IMessageRepository, MessageRepository>();
 builder.Services.AddScoped<IMessageService, MessageService>();
+builder.Services.AddScoped<ISessionRepository, SessionRepository>();
+builder.Services.AddScoped<ISessionService, SessionService>();
+builder.Services.AddScoped<IChatHubService, ChatHubService>();
 
 
 var app = builder.Build();
@@ -84,6 +91,6 @@ app.UseAuthorization();
 app.MapControllers();
 app.UseExceptionHandler();
 
-app.MapHub<ChatHub>("/update");
+app.MapHub<ChatHub>("/Notification");
 
 app.Run();

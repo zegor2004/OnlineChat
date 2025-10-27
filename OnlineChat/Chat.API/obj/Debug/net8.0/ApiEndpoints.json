@@ -61,7 +61,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Chat.Domain.Models.Chat.MessageModel",
+        "Type": "Chat.Domain.Models.Chat.Message.MessageModel",
         "MediaTypes": [
           "text/plain",
           "application/json",

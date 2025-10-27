@@ -1,7 +1,8 @@
 ﻿using Chat.Domain.Abstractions.Chat.Message;
-using Chat.Domain.Models.Chat;
+using Chat.Domain.Models.Chat.Message;
 using Chat.Infrastructure.Entites.Chat;
 using Chat.Infrastructure.Entites.User;
+using Chat.Infrastructure.Entities.Chat.Message;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chat.Infrastructure.Repositories.Chat
+namespace Chat.Infrastructure.Repositories.Chat.Message
 {
     public class MessageRepository : IMessageRepository
     {
@@ -25,7 +26,7 @@ namespace Chat.Infrastructure.Repositories.Chat
                 .OrderByDescending(x => x.created_at)
                 .FirstOrDefaultAsync();
 
-            var message =  MessageModel.Create(
+            var message = MessageModel.Create(
                 messagesEntity.user_id,
                 messagesEntity.text,
                 messagesEntity.created_at);

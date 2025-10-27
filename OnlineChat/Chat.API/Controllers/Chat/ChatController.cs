@@ -2,6 +2,7 @@
 using Chat.API.Contracts.Chat.Request;
 using Chat.Domain.Abstractions.Chat;
 using Chat.Domain.Models.Chat;
+using Chat.Domain.Models.Chat.Message;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Claims;

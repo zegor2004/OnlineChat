@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chat.Infrastructure.Entites.Chat
+namespace Chat.Infrastructure.Entities.Chat.Message
 {
     public class MessageEntity
     {
         public int id { get; set; }
         public Guid chat_id { get; set; }
-        public Guid user_id { get; set; } 
+        public Guid user_id { get; set; }
         public string text { get; set; } = string.Empty;
         public DateTime created_at { get; set; }
 

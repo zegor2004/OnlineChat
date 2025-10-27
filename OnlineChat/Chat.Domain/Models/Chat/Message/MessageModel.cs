@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chat.Domain.Models.Chat
+namespace Chat.Domain.Models.Chat.Message
 {
     public class MessageModel
     {
@@ -14,7 +14,7 @@ namespace Chat.Domain.Models.Chat
             Text = text;
             CreatedAt = createdAt;
         }
-        public Guid UserId { get;}
+        public Guid UserId { get; }
         public string Text { get; } = string.Empty;
         public DateTime CreatedAt { get; }
 

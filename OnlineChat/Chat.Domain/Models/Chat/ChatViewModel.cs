@@ -1,4 +1,5 @@
-﻿using Chat.Domain.Models.User;
+﻿using Chat.Domain.Models.Chat.Message;
+using Chat.Domain.Models.User;
 using System;
 using System.Collections.Generic;
 using System.Linq;

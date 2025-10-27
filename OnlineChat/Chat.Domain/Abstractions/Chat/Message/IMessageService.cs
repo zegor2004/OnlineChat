@@ -1,4 +1,4 @@
-﻿using Chat.Domain.Models.Chat;
+﻿using Chat.Domain.Models.Chat.Message;
 
 namespace Chat.Domain.Abstractions.Chat.Message
 {

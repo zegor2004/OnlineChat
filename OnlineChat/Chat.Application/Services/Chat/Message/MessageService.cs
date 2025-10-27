@@ -1,12 +1,12 @@
 ﻿using Chat.Domain.Abstractions.Chat.Message;
-using Chat.Domain.Models.Chat;
+using Chat.Domain.Models.Chat.Message;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Chat.Application.Services.Chat
+namespace Chat.Application.Services.Chat.Message
 {
     public class MessageService : IMessageService
     {
