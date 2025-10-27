@@ -320,6 +320,11 @@
       "MessageModel": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
           "userId": {
             "type": "string",
             "format": "uuid",
@@ -328,6 +333,10 @@
           "text": {
             "type": "string",
             "nullable": true,
+            "readOnly": true
+          },
+          "isRead": {
+            "type": "boolean",
             "readOnly": true
           },
           "createdAt": {

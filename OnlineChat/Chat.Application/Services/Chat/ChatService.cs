@@ -72,7 +72,7 @@ namespace Chat.Application.Services.Chat
             var message = await _messageServices.SendMessage(chatId, userIdFrom, text);
 
             //var sessions = await _sessionService.GetSessionUserByUserId(userIdTo);
-            await _chatHubService.NotificationNewMessage(message.Text, userIdTo);
+            await _chatHubService.NotificationNewMessage(message, userIdTo);
 
             return message;
         }

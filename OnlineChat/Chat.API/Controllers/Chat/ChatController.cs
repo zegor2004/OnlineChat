@@ -52,5 +52,10 @@ namespace Chat.API.Controllers.Chat
             var message = await _chatServices.SendMessage(userIdFrom, request.userId, request.text);
             return Ok(message);
         }
+        [HttpPut]
+        public async Task<ActionResult<bool>> UpdateStatusMessage(MessageIdRequest messageId)
+        {
+
+        }
     }
 }

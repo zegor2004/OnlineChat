@@ -26,6 +26,14 @@ namespace Chat.Infrastructure.Configurations.Chat.Message
             builder.Property(x => x.chat_id)
                 .IsRequired();
 
+            builder.Property(x => x.text)
+                .IsRequired();
+
+            builder.Property(x => x.is_read)
+                .IsRequired();
+
+            builder.Property(x => x.created_at)
+                .IsRequired();
         }
     }
 }

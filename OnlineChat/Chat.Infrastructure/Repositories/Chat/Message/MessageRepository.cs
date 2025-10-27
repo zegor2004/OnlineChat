@@ -27,8 +27,10 @@ namespace Chat.Infrastructure.Repositories.Chat.Message
                 .FirstOrDefaultAsync();
 
             var message = MessageModel.Create(
+                messagesEntity.id,
                 messagesEntity.user_id,
                 messagesEntity.text,
+                messagesEntity.is_read,
                 messagesEntity.created_at);
 
             return message;
@@ -41,7 +43,7 @@ namespace Chat.Infrastructure.Repositories.Chat.Message
                 .ToListAsync();
 
             var messages = messagesEntity
-                .Select(x => MessageModel.Create(x.user_id, x.text, x.created_at))
+                .Select(x => MessageModel.Create(x.id, x.user_id, x.text, x.is_read, x.created_at))
                 .ToList();
 
             return messages;
@@ -54,6 +56,7 @@ namespace Chat.Infrastructure.Repositories.Chat.Message
                 chat_id = chatId,
                 user_id = userId,
                 text = text,
+                is_read = false,
                 created_at = createdAt
             };
 

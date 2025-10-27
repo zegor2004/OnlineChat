@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Chat.Domain.Abstractions.Hub;
 using Chat.Domain.Abstractions.User.Session;
+using Chat.Domain.Models.Chat.Message;
 using Chat.Infrastructure.Hubs;
 using Microsoft.AspNetCore.SignalR;
 
@@ -21,7 +22,7 @@ namespace Chat.Infrastructure.Services.Hub
             _sessionRepository = sessionRepository;
         }
 
-        public async Task NotificationNewMessage(string message, Guid userId)
+        public async Task NotificationNewMessage(MessageModel message, Guid userId)
         {
             var connectionList = await _sessionRepository.Get(userId);
             if (connectionList.Count > 0)
