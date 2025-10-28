@@ -39,7 +39,7 @@ namespace Chat.Application.Services.Chat
 
             foreach (var chat in chats)
             {
-                var message = await _messageServices.GetMessageLast(chat.ChatId);
+                var message = await _messageServices.GetLastMessage(chat.ChatId);
                 var user = await _userService.GetUserByUserId(chat.UserId);
                 var chatView = ChatViewModel.Create(chat.ChatId, user, message);
                 chatsView.Add(chatView);
@@ -75,6 +75,18 @@ namespace Chat.Application.Services.Chat
             await _chatHubService.NotificationNewMessage(message, userIdTo);
 
             return message;
+        }
+
+        public async Task<bool> UpdateStatusMessage(Guid messageId)
+        {
+            var result = await _messageServices.UpdateMessageStatus(messageId);
+            if (result)
+            {
+                var message = await _messageServices.GetMessage(messageId);
+                await _chatHubService.UpdateStatusMessage(message);
+            }
+
+            return result;
         }
     }
 }

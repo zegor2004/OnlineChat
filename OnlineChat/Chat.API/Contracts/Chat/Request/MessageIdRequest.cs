@@ -1,4 +1,4 @@
 ﻿namespace Chat.API.Contracts.Chat.Request
 {
-    public record MessageIdRequest(int messageId);
+    public record MessageIdRequest(Guid messageId);
 }

@@ -8,7 +8,7 @@ namespace Chat.Infrastructure.Entities.Chat.Message
 {
     public class MessageEntity
     {
-        public int id { get; set; }
+        public Guid id { get; set; }
         public Guid chat_id { get; set; }
         public Guid user_id { get; set; }
         public string text { get; set; } = string.Empty;

@@ -15,24 +15,38 @@ namespace Chat.Application.Services.Chat.Message
         {
             _messageRepository = messageRepository;
         }
-        public async Task<List<MessageModel>> GetMessages(Guid chat_id)
+        public async Task<List<MessageModel>> GetMessages(Guid chatId)
         {
-            var messages = await _messageRepository.Get(chat_id);
+            var messages = await _messageRepository.GetMessages(chatId);
 
             return messages;
         }
-        public async Task<MessageModel> GetMessageLast(Guid chat_id)
+        public async Task<MessageModel> GetLastMessage(Guid chat_id)
         {
-            var message = await _messageRepository.GetMessageLast(chat_id);
+            var message = await _messageRepository.GetLastMessage(chat_id);
 
             return message;
         }
 
         public async Task<MessageModel> SendMessage(Guid chatId, Guid UserId, string text)
         {
-            var message = MessageModel.Create(UserId, text);
+            var message = MessageModel.Create(chatId, UserId, text);
 
-            await _messageRepository.Add(chatId, UserId, text, message.CreatedAt);
+            await _messageRepository.AddMessage(message.MessageId, chatId, UserId, text, message.CreatedAt);
+
+            return message;
+        }
+
+        public async Task<bool> UpdateMessageStatus(Guid messageId)
+        {
+            var result = await _messageRepository.UpdateMessageStatus(messageId);
+
+            return result;
+        }
+
+        public async Task<MessageModel> GetMessage(Guid messageId)
+        {
+            var message = await _messageRepository.GetMessage(messageId);
 
             return message;
         }

@@ -8,37 +8,38 @@ namespace Chat.Domain.Models.Chat.Message
 {
     public class MessageModel
     {
-        private MessageModel(int id, Guid userId, string text, bool isRead, DateTime createdAt)
+        private MessageModel(Guid messageId, Guid chatId, Guid userId, string text, bool isRead, DateTime createdAt)
         {
+            MessageId = messageId;
+            ChatId = chatId;
             UserId = userId;
             Text = text;
             IsRead = isRead;
             CreatedAt = createdAt;
         }
-        public int Id { get;}
+        public Guid MessageId { get;}
+        public Guid ChatId { get;}
         public Guid UserId { get; }
         public string Text { get; } = string.Empty;
         public bool IsRead { get; }
         public DateTime CreatedAt { get; }
 
         private const int MaxTextLenght = 500;
-        public static MessageModel Create(int id, Guid userId, string text, bool isRead, DateTime createdAt)
+        public static MessageModel Create(Guid messageId, Guid chatId, Guid userId, string text, bool isRead, DateTime createdAt)
         {
-            var message = new MessageModel(id, userId, text, isRead, createdAt);
+            var message = new MessageModel(messageId, chatId, userId, text, isRead, createdAt);
             return message;
         }
 
-        public static MessageModel Create(Guid userId, string text)
+        public static MessageModel Create(Guid chatId, Guid userId, string text)
         {
-            var createdAt = DateTime.UtcNow;
-            var message = new MessageModel(0, userId, text, false, createdAt);
+            var message = new MessageModel(Guid.NewGuid(), chatId, userId, text, false, DateTime.UtcNow);
             return message;
         }
 
         public static MessageModel CreateEmpty()
         {
-            var createdAt = DateTime.UtcNow;
-            var message = new MessageModel(0, Guid.Empty, string.Empty, false, createdAt);
+            var message = new MessageModel(Guid.Empty, Guid.Empty, Guid.Empty, string.Empty, false, DateTime.UtcNow);
             return message;
         }
     }

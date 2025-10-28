@@ -53,9 +53,15 @@ namespace Chat.API.Controllers.Chat
             return Ok(message);
         }
         [HttpPut]
-        public async Task<ActionResult<bool>> UpdateStatusMessage(MessageIdRequest messageId)
+        public async Task<ActionResult<bool>> UpdateStatusMessage(MessageIdRequest request)
         {
+            var nameIdentifier = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (nameIdentifier == null) return Unauthorized();
 
+            var result = await _chatServices.UpdateStatusMessage(request.messageId);
+            if (!result) return BadRequest();
+
+            return Ok(result);
         }
     }
 }

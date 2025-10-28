@@ -32,7 +32,18 @@ namespace Chat.Infrastructure.Services.Hub
                     await _hubContext.Clients.Client(connection).SendAsync("NewMessage", message);
                 }
             }
+        }
 
+        public async Task UpdateStatusMessage(MessageModel message)
+        {
+            var connectionList = await _sessionRepository.Get(message.UserId);
+            if (connectionList.Count > 0)
+            {
+                foreach (var connection in connectionList)
+                {
+                    await _hubContext.Clients.Client(connection).SendAsync("UpdateStatusMessage", message);
+                }
+            }
         }
     }
 }

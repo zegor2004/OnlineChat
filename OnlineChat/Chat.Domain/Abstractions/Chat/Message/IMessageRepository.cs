@@ -4,8 +4,10 @@ namespace Chat.Domain.Abstractions.Chat.Message
 {
     public interface IMessageRepository
     {
-        Task<MessageModel> GetMessageLast(Guid chatId);
-        Task<List<MessageModel>> Get(Guid chatId);
-        Task<bool> Add(Guid chatId, Guid userId, string text, DateTime createdAt);
+        Task<MessageModel> GetLastMessage(Guid chatId);
+        Task<List<MessageModel>> GetMessages(Guid chatId);
+        Task<bool> AddMessage(Guid messageId, Guid chatId, Guid userId, string text, DateTime createdAt);
+        Task<bool> UpdateMessageStatus(Guid messageId);
+        Task<MessageModel> GetMessage(Guid messageId);
     }
 }

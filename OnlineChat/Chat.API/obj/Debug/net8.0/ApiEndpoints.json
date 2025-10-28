@@ -72,6 +72,32 @@
     ]
   },
   {
+    "ContainingType": "Chat.API.Controllers.Chat.ChatController",
+    "Method": "UpdateStatusMessage",
+    "RelativePath": "Chat/UpdateStatusMessage",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Chat.API.Contracts.Chat.Request.MessageIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Boolean",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Chat.API.Controllers.User.UserController",
     "Method": "FindUserByName",
     "RelativePath": "User/FindUserByName",

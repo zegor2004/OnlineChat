@@ -15,6 +15,7 @@ namespace Chat.Domain.Models.User
         }
         public Guid UserId { get; }
         public string Name { get; } = string.Empty;
+        public bool IsOnline { get; } = false;
 
         public static UserViewModel Create(Guid userId, string name)
         {

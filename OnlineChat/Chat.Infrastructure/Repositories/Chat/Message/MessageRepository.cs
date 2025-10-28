@@ -19,23 +19,24 @@ namespace Chat.Infrastructure.Repositories.Chat.Message
         {
             _db = db;
         }
-        public async Task<MessageModel> GetMessageLast(Guid chatId)
+        public async Task<MessageModel> GetLastMessage(Guid chatId)
         {
-            var messagesEntity = await _db.messages
+            var messageEntity = await _db.messages
                 .Where(x => x.chat_id == chatId)
                 .OrderByDescending(x => x.created_at)
                 .FirstOrDefaultAsync();
 
             var message = MessageModel.Create(
-                messagesEntity.id,
-                messagesEntity.user_id,
-                messagesEntity.text,
-                messagesEntity.is_read,
-                messagesEntity.created_at);
+                messageEntity.id,
+                messageEntity.chat_id,
+                messageEntity.user_id,
+                messageEntity.text,
+                messageEntity.is_read,
+                messageEntity.created_at);
 
             return message;
         }
-        public async Task<List<MessageModel>> Get(Guid chatId)
+        public async Task<List<MessageModel>> GetMessages(Guid chatId)
         {
             var messagesEntity = await _db.messages
                 .Where(x => x.chat_id == chatId)
@@ -43,16 +44,17 @@ namespace Chat.Infrastructure.Repositories.Chat.Message
                 .ToListAsync();
 
             var messages = messagesEntity
-                .Select(x => MessageModel.Create(x.id, x.user_id, x.text, x.is_read, x.created_at))
+                .Select(x => MessageModel.Create(x.id, x.chat_id, x.user_id, x.text, x.is_read, x.created_at))
                 .ToList();
 
             return messages;
         }
 
-        public async Task<bool> Add(Guid chatId, Guid userId, string text, DateTime createdAt)
+        public async Task<bool> AddMessage(Guid messageId, Guid chatId, Guid userId, string text, DateTime createdAt)
         {
             var messageEntity = new MessageEntity
             {
+                id = messageId,
                 chat_id = chatId,
                 user_id = userId,
                 text = text,
@@ -64,6 +66,34 @@ namespace Chat.Infrastructure.Repositories.Chat.Message
             var result = await _db.SaveChangesAsync();
 
             return result > 0;
+        }
+
+        public async Task<bool> UpdateMessageStatus(Guid messageId)
+        {
+            var result = await _db.messages
+                .Where(x => x.id == messageId)
+                .ExecuteUpdateAsync(z => z
+                .SetProperty(x => x.is_read, x => true));
+
+            return result > 0;
+        }
+
+        public async Task<MessageModel> GetMessage(Guid messageId)
+        {
+            var messageEntity = await _db.messages
+                .Where (x => x.id == messageId)
+                .FirstOrDefaultAsync();
+
+            var message = MessageModel.Create(
+                messageEntity.id,
+                messageEntity.chat_id,
+                messageEntity.user_id,
+                messageEntity.text,
+                messageEntity.is_read,
+                messageEntity.created_at
+            );
+
+            return message;
         }
     }
 }

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Chat.Domain.csproj": {}
+    "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Chat.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Chat.Domain.csproj": {
+    "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Chat.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Chat.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Chat.Domain.csproj",
         "projectName": "Chat.Domain",
-        "projectPath": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Chat.Domain.csproj",
-        "packagesPath": "C:\\Users\\zegor\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\zegor\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\obj\\",
+        "projectPath": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\Chat.Domain.csproj",
+        "packagesPath": "C:\\Users\\zorin_ea\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\zorin_ea\\Desktop\\OnlineChat\\OnlineChat\\Chat.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\zegor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\zorin_ea\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -65,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
