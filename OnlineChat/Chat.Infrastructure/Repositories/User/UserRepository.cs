@@ -39,7 +39,7 @@ namespace Chat.Infrastructure.Repositories.User
                 .AsNoTracking()
                 .FirstOrDefaultAsync();
 
-            var user = UserViewModel.Create(userEntity.id, userEntity.name);
+            var user = UserViewModel.Create(userEntity.id, userEntity.name, false);
 
             return user;
         }
@@ -51,7 +51,7 @@ namespace Chat.Infrastructure.Repositories.User
                 .ToListAsync();
 
             var users = userEntites
-                .Select(x => UserViewModel.Create(x.id, x.name))
+                .Select(x => UserViewModel.Create(x.id, x.name, false))
                 .ToList();
 
             return users;

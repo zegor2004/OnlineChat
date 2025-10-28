@@ -61,7 +61,7 @@ namespace Chat.API.Controllers.Chat
             var result = await _chatServices.UpdateStatusMessage(request.messageId);
             if (!result) return BadRequest();
 
-            return Ok(result);
+            return NoContent();
         }
     }
 }

@@ -15,9 +15,19 @@ namespace Chat.Application.Services.User.Session
             _sessionRepository = sessionRepository;
         }
 
-        public async Task<List<string>> GetSessionUserByUserId(Guid userId)
+        public async Task<List<string>> GetUserSessions(Guid userId)
         {
             return await _sessionRepository.Get(userId);
+        }
+
+        public async Task CreateSession(string connectionId, Guid userId)
+        {
+            await _sessionRepository.Add(connectionId, userId);
+        }
+
+        public async Task DeleteSession(string connectionId)
+        {
+            await _sessionRepository.Delete(connectionId);
         }
     }
 }

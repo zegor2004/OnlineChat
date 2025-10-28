@@ -1,4 +1,5 @@
 ﻿using Chat.Domain.Models.Chat.Message;
+using Chat.Domain.Models.User;
 
 namespace Chat.Domain.Abstractions.Hub
 {
@@ -6,6 +7,5 @@ namespace Chat.Domain.Abstractions.Hub
     {
         Task NotificationNewMessage(MessageModel message, Guid userId);
         Task UpdateStatusMessage(MessageModel message);
-        
     }
 }

@@ -26,6 +26,9 @@ namespace Chat.Infrastructure.Repositories.Chat.Message
                 .OrderByDescending(x => x.created_at)
                 .FirstOrDefaultAsync();
 
+            if (messageEntity == null)
+                return MessageModel.CreateEmpty();
+
             var message = MessageModel.Create(
                 messageEntity.id,
                 messageEntity.chat_id,

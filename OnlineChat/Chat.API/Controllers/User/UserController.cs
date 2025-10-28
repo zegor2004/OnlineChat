@@ -30,7 +30,7 @@ namespace Chat.API.Controllers.User
             var users = await _usersService.FindUserByName(userId, request.name);
             if (users.Count == 0) return NotFound();
 
-            var response = users.Select(b => new UserResponse(b.UserId, b.Name));
+            var response = users.Select(x => new UserResponse(x.UserId, x.IsOnline, x.Name));
             return Ok(response);
         }
         [HttpPost]

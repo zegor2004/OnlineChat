@@ -449,6 +449,9 @@
             "type": "string",
             "format": "uuid"
           },
+          "isOnline": {
+            "type": "boolean"
+          },
           "name": {
             "type": "string",
             "nullable": true
@@ -467,6 +470,10 @@
           "name": {
             "type": "string",
             "nullable": true,
+            "readOnly": true
+          },
+          "isOnline": {
+            "type": "boolean",
             "readOnly": true
           }
         },

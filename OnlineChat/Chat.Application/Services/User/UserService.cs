@@ -1,5 +1,6 @@
 ﻿using Chat.Domain.Abstractions.Auth;
 using Chat.Domain.Abstractions.User;
+using Chat.Domain.Abstractions.User.Session;
 using Chat.Domain.Models.User;
 using System;
 using System.Collections.Generic;
@@ -14,20 +15,33 @@ namespace Chat.Application.Services.User
         private readonly IUserRepository _usersRerositry;
         private readonly IPasswordHasher _passwordHasher;
         private readonly IJwtProvider _jwtProvider;
+        private readonly ISessionService _sessionService;
 
-        public UserService(IUserRepository usersRepository, IPasswordHasher passwordHasher, IJwtProvider jwtProvider)
+        public UserService(IUserRepository usersRepository, IPasswordHasher passwordHasher, IJwtProvider jwtProvider, ISessionService sessionService)
         {
             _usersRerositry = usersRepository;
             _passwordHasher = passwordHasher;
             _jwtProvider = jwtProvider;
+            _sessionService = sessionService;
         }
         public async Task<UserViewModel> GetUserByUserId(Guid userId)
         {
-            return await _usersRerositry.GetUserByUserId(userId);
+            var user = await _usersRerositry.GetUserByUserId(userId);
+            var session = await _sessionService.GetUserSessions(user.UserId);
+            var isOnline = session.Count() > 0 ? true : false;
+            user.UpdateStatus(isOnline);
+            return user;
         }
         public async Task<List<UserViewModel>> FindUserByName(Guid userId, string name)
         {
-            return await _usersRerositry.GetUsersByName(userId, name);
+            var users = await _usersRerositry.GetUsersByName(userId, name);
+            foreach (var user in users)
+            {
+                var session = await _sessionService.GetUserSessions(user.UserId);
+                var isOnline = session.Count() > 0 ? true : false;
+                user.UpdateStatus(isOnline);
+            }
+            return users;
         }
 
         public async Task<string> Registration(string email, string password, string name)

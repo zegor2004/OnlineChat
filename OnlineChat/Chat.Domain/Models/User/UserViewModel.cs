@@ -8,19 +8,26 @@ namespace Chat.Domain.Models.User
 {
     public class UserViewModel
     {
-        private UserViewModel(Guid userId, string name)
+        private UserViewModel(Guid userId, string name, bool isOnline)
         {
             UserId = userId;
             Name = name;
+            IsOnline = isOnline;
         }
         public Guid UserId { get; }
         public string Name { get; } = string.Empty;
-        public bool IsOnline { get; } = false;
+        public bool IsOnline { get; private set; } = false;
 
-        public static UserViewModel Create(Guid userId, string name)
+        public static UserViewModel Create(Guid userId, string name, bool isOnline)
         {
-            UserViewModel user = new UserViewModel(userId, name);
+            UserViewModel user = new UserViewModel(userId, name, isOnline);
             return user;
         }
+
+        public void UpdateStatus(bool isOnline)
+        {
+            this.IsOnline = isOnline;
+        }
+
     }
 }

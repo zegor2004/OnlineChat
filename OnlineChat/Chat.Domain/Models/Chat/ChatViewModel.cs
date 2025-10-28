@@ -40,11 +40,12 @@ namespace Chat.Domain.Models.Chat
         {
             var messageEmpty = new List<MessageModel>();
 
-            var userEmpty = UserViewModel.Create(Guid.Empty, string.Empty);
+            var userEmpty = UserViewModel.Create(Guid.Empty, string.Empty, false);
 
             var chat = new ChatViewModel(Guid.Empty, userEmpty, messageEmpty);
             
             return chat;
         }
+
     }
 }
