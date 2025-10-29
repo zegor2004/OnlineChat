@@ -26,7 +26,7 @@ namespace Chat.API.Controllers.Chat
             if (nameIdentifier == null) return Unauthorized();
             var userId = new Guid(nameIdentifier.Value);
 
-            var chats = await _chatServices.GetChatPreview(userId);
+            var chats = await _chatServices.GetChatsPreview(userId);
             if (chats.Count == 0) return NotFound();
             
             return Ok(chats);
@@ -38,10 +38,20 @@ namespace Chat.API.Controllers.Chat
             if (nameIdentifier == null) return Unauthorized();
             var userIdFrom = new Guid(nameIdentifier.Value);
 
-            var chat = await _chatServices.GetChat(userIdFrom, request.userId);
+            var chat = await _chatServices.GetChat(request.chatId, userIdFrom);
             if (chat.ChatId == Guid.Empty) return NotFound();
 
             return Ok(chat);
+        }
+        [HttpGet]
+        public async Task<ActionResult<Guid>> GetChatId(GetChatIdRequest request)
+        {
+            var nameIdentifier = User.FindFirst(ClaimTypes.NameIdentifier);
+            if (nameIdentifier == null) return Unauthorized();
+            var userIdFrom = new Guid(nameIdentifier.Value);
+
+            var chatId = await _chatServices.GetChatId(userIdFrom, request.userId);
+            return Ok(chatId);
         }
         [HttpPost]
         public async Task<ActionResult<MessageModel>> SendMessage(SendMessageRequest request)
@@ -49,16 +59,17 @@ namespace Chat.API.Controllers.Chat
             var nameIdentifier = User.FindFirst(ClaimTypes.NameIdentifier);
             if (nameIdentifier == null) return Unauthorized();
             var userIdFrom = new Guid(nameIdentifier.Value);
-            var message = await _chatServices.SendMessage(userIdFrom, request.userId, request.text);
+
+            var message = await _chatServices.SendMessage(userIdFrom, request.chatId, request.text);
             return Ok(message);
         }
         [HttpPut]
-        public async Task<ActionResult<bool>> UpdateStatusMessage(MessageIdRequest request)
+        public async Task<ActionResult> UpdateMessageStatus(MessageIdRequest request)
         {
             var nameIdentifier = User.FindFirst(ClaimTypes.NameIdentifier);
             if (nameIdentifier == null) return Unauthorized();
 
-            var result = await _chatServices.UpdateStatusMessage(request.messageId);
+            var result = await _chatServices.UpdateMessageStatus(request.messageId);
             if (!result) return BadRequest();
 
             return NoContent();

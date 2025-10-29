@@ -32,7 +32,7 @@ namespace Chat.Application.Services.Chat.Message
         {
             var message = MessageModel.Create(chatId, UserId, text);
 
-            await _messageRepository.AddMessage(message.MessageId, chatId, UserId, text, message.CreatedAt);
+            await _messageRepository.AddMessage(message);
 
             return message;
         }

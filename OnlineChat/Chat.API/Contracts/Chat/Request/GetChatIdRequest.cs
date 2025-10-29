@@ -1,7 +1,7 @@
 ﻿namespace Chat.API.Contracts.Chat.Request
 {
-    public record GetChatRequest
+    public record GetChatIdRequest
     (
-        Guid chatId
+        Guid userId
     );
 }

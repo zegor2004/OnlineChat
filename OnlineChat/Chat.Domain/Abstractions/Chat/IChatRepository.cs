@@ -6,6 +6,7 @@ namespace Chat.Domain.Abstractions.Chat
     {
         Task<Guid> Create(Guid userIdFrom, Guid userIdTo);
         Task<List<ChatModel>> GetChats(Guid userId);
-        Task<Guid> GetChat(Guid userIdFrom, Guid userIdTo);
+        Task<Guid> GetChatId(Guid userIdFrom, Guid userIdTo);
+        Task<Guid> GetUserIdFromChat(Guid chatId, Guid userIdFrom);
     }
 }

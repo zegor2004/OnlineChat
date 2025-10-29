@@ -6,7 +6,7 @@ namespace Chat.Domain.Abstractions.Chat.Message
     {
         Task<MessageModel> GetLastMessage(Guid chatId);
         Task<List<MessageModel>> GetMessages(Guid chatId);
-        Task<bool> AddMessage(Guid messageId, Guid chatId, Guid userId, string text, DateTime createdAt);
+        Task<bool> AddMessage(MessageModel message);
         Task<bool> UpdateMessageStatus(Guid messageId);
         Task<MessageModel> GetMessage(Guid messageId);
     }

@@ -1,9 +1,7 @@
 ﻿using System.Security.Claims;
 using Chat.API.Contracts.User.Request;
-using Chat.API.Contracts.User.Response;
-using Chat.Application.Services;
 using Chat.Domain.Abstractions.User;
-using Chat.Domain.Models;
+using Chat.Domain.Models.User;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,7 +18,7 @@ namespace Chat.API.Controllers.User
         }
         [HttpGet]
         [Authorize]
-        public async Task<ActionResult<List<UserResponse>>> FindUserByName(FindUserRequest request)
+        public async Task<ActionResult<List<UserViewModel>>> FindUserByName(FindUserRequest request)
         {
             var nameIdentifier = User.FindFirst(ClaimTypes.NameIdentifier);
             if (nameIdentifier == null) return Unauthorized();
@@ -30,8 +28,7 @@ namespace Chat.API.Controllers.User
             var users = await _usersService.FindUserByName(userId, request.name);
             if (users.Count == 0) return NotFound();
 
-            var response = users.Select(x => new UserResponse(x.UserId, x.IsOnline, x.Name));
-            return Ok(response);
+            return Ok(users);
         }
         [HttpPost]
         public async Task<ActionResult> Registration(RegUserRequest request)

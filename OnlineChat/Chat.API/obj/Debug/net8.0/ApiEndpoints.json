@@ -27,6 +27,32 @@
   },
   {
     "ContainingType": "Chat.API.Controllers.Chat.ChatController",
+    "Method": "GetChatId",
+    "RelativePath": "Chat/GetChatId",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Chat.API.Contracts.Chat.Request.GetChatIdRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Guid",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Chat.API.Controllers.Chat.ChatController",
     "Method": "GetChatsPreview",
     "RelativePath": "Chat/GetChatsPreview",
     "HttpMethod": "GET",
@@ -73,8 +99,8 @@
   },
   {
     "ContainingType": "Chat.API.Controllers.Chat.ChatController",
-    "Method": "UpdateStatusMessage",
-    "RelativePath": "Chat/UpdateStatusMessage",
+    "Method": "UpdateMessageStatus",
+    "RelativePath": "Chat/UpdateMessageStatus",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -85,17 +111,7 @@
         "IsRequired": true
       }
     ],
-    "ReturnTypes": [
-      {
-        "Type": "System.Boolean",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
+    "ReturnTypes": []
   },
   {
     "ContainingType": "Chat.API.Controllers.User.UserController",
@@ -113,7 +129,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.List\u00601[[Chat.API.Contracts.User.Response.UserResponse, Chat.API, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.List\u00601[[Chat.Domain.Models.User.UserViewModel, Chat.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
         "MediaTypes": [
           "text/plain",
           "application/json",

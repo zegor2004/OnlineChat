@@ -2,7 +2,7 @@
 {
     public record SendMessageRequest
     (
-        Guid userId,
+        Guid chatId,
         string text
     );
 }

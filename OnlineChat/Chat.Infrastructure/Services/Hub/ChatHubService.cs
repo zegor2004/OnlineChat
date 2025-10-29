@@ -37,14 +37,14 @@ namespace Chat.Infrastructure.Services.Hub
             }
         }
 
-        public async Task UpdateStatusMessage(MessageModel message)
+        public async Task UpdateMessageStatus(MessageModel message)
         {
             var connectionList = await _sessionService.GetUserSessions(message.UserId);
             if (connectionList.Count > 0)
             {
                 foreach (var connection in connectionList)
                 {
-                    await _hubContext.Clients.Client(connection).SendAsync("UpdateStatusMessage", message);
+                    await _hubContext.Clients.Client(connection).SendAsync("UpdateMessageStatus", message);
                 }
             }
         }

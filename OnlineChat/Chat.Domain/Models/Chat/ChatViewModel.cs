@@ -22,30 +22,16 @@ namespace Chat.Domain.Models.Chat
 
         public static ChatViewModel Create(Guid guid, UserViewModel user, List<MessageModel> messages)
         {
-            //var guid = Guid.NewGuid();
             var chat = new ChatViewModel(guid, user, messages);
             return chat;
         }
 
         public static ChatViewModel Create(Guid guid, UserViewModel user, MessageModel message)
         {
-            //var guid = Guid.NewGuid();
             var messages = new List<MessageModel>();
             messages.Add(message);
             var chat = new ChatViewModel(guid, user, messages);
             return chat;
         }
-
-        public static ChatViewModel CreateEmpty()
-        {
-            var messageEmpty = new List<MessageModel>();
-
-            var userEmpty = UserViewModel.Create(Guid.Empty, string.Empty, false);
-
-            var chat = new ChatViewModel(Guid.Empty, userEmpty, messageEmpty);
-            
-            return chat;
-        }
-
     }
 }

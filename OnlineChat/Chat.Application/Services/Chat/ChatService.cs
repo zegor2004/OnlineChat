@@ -1,18 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Chat.Application.Services.User.Session;
-using Chat.Domain.Abstractions.Chat;
+﻿using Chat.Domain.Abstractions.Chat;
 using Chat.Domain.Abstractions.Chat.Message;
 using Chat.Domain.Abstractions.Hub;
 using Chat.Domain.Abstractions.User;
-using Chat.Domain.Abstractions.User.Session;
 using Chat.Domain.Models.Chat;
 using Chat.Domain.Models.Chat.Message;
-using Chat.Domain.Models.User;
-using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Chat.Application.Services.Chat
 {
@@ -21,17 +12,15 @@ namespace Chat.Application.Services.Chat
         private readonly IChatRepository _chatRepository;
         private readonly IMessageService _messageServices;
         private readonly IUserService _userService;
-        private readonly ISessionService _sessionService;
         private readonly IChatHubService _chatHubService;
-        public ChatService(IChatRepository chatRepository, IMessageService messageService, IUserService userService, ISessionService sessionService, IChatHubService chatHubService)
+        public ChatService(IChatRepository chatRepository, IMessageService messageService, IUserService userService, IChatHubService chatHubService)
         {
             _chatRepository = chatRepository;
             _messageServices = messageService;
             _userService = userService;
-            _sessionService = sessionService;
             _chatHubService = chatHubService;
         }
-        public async Task<List<ChatViewModel>> GetChatPreview(Guid UserId)
+        public async Task<List<ChatViewModel>> GetChatsPreview(Guid UserId)
         {
             var chats = await _chatRepository.GetChats(UserId);
 
@@ -46,14 +35,11 @@ namespace Chat.Application.Services.Chat
             }
             return chatsView;
         }
-        public async Task<ChatViewModel> GetChat(Guid userIdFrom, Guid userIdTo)
-        {
-            var chatId = await _chatRepository.GetChat(userIdFrom, userIdTo);
-
-            if (chatId == Guid.Empty)
-                return ChatViewModel.CreateEmpty();
-            
+        public async Task<ChatViewModel> GetChat(Guid chatId, Guid userIdFrom)
+        {            
             var messages = await _messageServices.GetMessages(chatId);
+
+            var userIdTo = await _chatRepository.GetUserIdFromChat(chatId, userIdFrom);
 
             var user = await _userService.GetUserByUserId(userIdTo);
 
@@ -62,28 +48,34 @@ namespace Chat.Application.Services.Chat
             return chatView;
         }
 
-        public async Task<MessageModel> SendMessage(Guid userIdFrom, Guid userIdTo, string text)
+        public async Task<Guid> GetChatId(Guid userIdFrom, Guid userIdTo)
         {
-            var chatId = await _chatRepository.GetChat(userIdFrom, userIdTo);
+            var chatId = await _chatRepository.GetChatId(userIdFrom, userIdTo);
 
-            if (chatId == Guid.Empty) 
+            if (chatId == Guid.Empty)
                 chatId = await _chatRepository.Create(userIdFrom, userIdTo);
+
+            return chatId;
+        }
+
+        public async Task<MessageModel> SendMessage(Guid userIdFrom, Guid chatId, string text)
+        {
+            var userIdTo = await _chatRepository.GetUserIdFromChat(chatId, userIdFrom);
 
             var message = await _messageServices.SendMessage(chatId, userIdFrom, text);
 
-            //var sessions = await _sessionService.GetSessionUserByUserId(userIdTo);
             await _chatHubService.NotificationNewMessage(message, userIdTo);
 
             return message;
         }
 
-        public async Task<bool> UpdateStatusMessage(Guid messageId)
+        public async Task<bool> UpdateMessageStatus(Guid messageId)
         {
             var result = await _messageServices.UpdateMessageStatus(messageId);
             if (result)
             {
                 var message = await _messageServices.GetMessage(messageId);
-                await _chatHubService.UpdateStatusMessage(message);
+                await _chatHubService.UpdateMessageStatus(message);
             }
 
             return result;

@@ -53,16 +53,16 @@ namespace Chat.Infrastructure.Repositories.Chat.Message
             return messages;
         }
 
-        public async Task<bool> AddMessage(Guid messageId, Guid chatId, Guid userId, string text, DateTime createdAt)
+        public async Task<bool> AddMessage(MessageModel message)
         {
             var messageEntity = new MessageEntity
             {
-                id = messageId,
-                chat_id = chatId,
-                user_id = userId,
-                text = text,
+                id = message.MessageId,
+                chat_id = message.ChatId,
+                user_id = message.UserId,
+                text = message.Text,
                 is_read = false,
-                created_at = createdAt
+                created_at = message.CreatedAt
             };
 
             await _db.AddAsync(messageEntity);
